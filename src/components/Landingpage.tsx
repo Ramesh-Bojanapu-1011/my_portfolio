@@ -209,7 +209,7 @@ const Landingpage = () => {
     };
   }, []);
 
-  const text = `I'm Frontend Developer And I'm Designer And I'm Developer`;  // Text for rotating text
+  const text = `I'm Frontend Developer And I'm Designer And I'm Developer`; // Text for rotating text
   const typedRef = useRef(null);
   useEffect(() => {
     AOS.init({ duration: 1000, delay: 100 });
@@ -913,11 +913,40 @@ const Landingpage = () => {
                             />
                           </svg>
                           <h2 className="counter">
+                            <span data-target="36">0</span>%
+                          </h2>
+                        </div>
+                      </div>
+                      <div className="sk-title">Javascript</div>
+                    </div>
+                    <div className="skill">
+                      <div className="outer-circle">
+                        <div className="inner-circle">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            width="180px"
+                            height="180px"
+                          >
+                            <defs>
+                              <linearGradient id="GradientColor">
+                                <stop offset="0%" stopColor="#e91e63" />
+                                <stop offset="100%" stopColor="#673ab7" />
+                              </linearGradient>
+                            </defs>
+                            <circle
+                              cx="85"
+                              cy="85"
+                              r="75"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                          <h2 className="counter">
                             <span data-target="56">0</span>%
                           </h2>
                         </div>
                       </div>
-                      <div className="sk-title">JavaScript</div>
+                      <div className="sk-title">Node Js</div>
                     </div>
 
                     <div className="skill">
