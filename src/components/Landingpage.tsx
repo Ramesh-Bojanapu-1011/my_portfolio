@@ -209,7 +209,7 @@ const Landingpage = () => {
     };
   }, []);
 
-  const text = `I'm Youtuber And I'm Frontend Developer And I'm Designer`;
+  const text = `I'm Frontend Developer And I'm Designer And I'm Developer`;  // Text for rotating text
   const typedRef = useRef(null);
   useEffect(() => {
     AOS.init({ duration: 1000, delay: 100 });
@@ -243,7 +243,7 @@ const Landingpage = () => {
   return (
     <>
       <div className="whole-page">
-        <header>
+        <header className="caret-transparent">
           <a href="#" className="logo">
             <span>R</span>amesh
           </a>
@@ -304,7 +304,7 @@ const Landingpage = () => {
           </div>
         </header>
 
-        <section className="home " id="home">
+        <section className="home caret-transparent " id="home">
           <div className="mt-12">
             <h3 className="text-gray-500 font-light uppercase text-[1.1rem]">
               Welcome To my World
@@ -481,7 +481,7 @@ const Landingpage = () => {
           </div>
         </section>
 
-        <section className="about" id="about">
+        <section className="about caret-transparent" id="about">
           <div className="about-img">
             <img src="img/aboutMe.png" alt="" className="aboutHero " />
             <div className="showcase-ring">
@@ -661,7 +661,7 @@ const Landingpage = () => {
           </div>
         </section>
 
-        <section className="services" id="services">
+        <section className="services caret-transparent" id="services">
           <div className="main-text">
             <h2 className="heading">My Services</h2>
             <span>what i will do for you</span>
@@ -789,7 +789,7 @@ const Landingpage = () => {
           </div>
         </section>
 
-        <section className="blog" id="blog">
+        <section className="blog caret-transparent" id="blog">
           <div className="main-text">
             <h2 className="heading">Blog</h2>
             <span>Latest News & Post</span>
@@ -822,7 +822,7 @@ const Landingpage = () => {
 
         <section className="down-box">
           <div className="contactSkills">
-            <div className="skills">
+            <div className="skills caret-transparent">
               <div className="container">
                 <div className="skillBox">
                   <div className="main-text">
