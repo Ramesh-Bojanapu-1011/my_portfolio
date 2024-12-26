@@ -9,8 +9,7 @@ A modern web application built with **React**, **TypeScript**, and **Vite**.
 4. [Scripts](#scripts)  
 5. [Project Structure](#project-structure)  
 6. [Technologies Used](#technologies-used)  
-7. [Contributing](#contributing)  
-8. [License](#license)  
+7. [License](#license)  
 
 ---
 
