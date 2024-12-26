@@ -69,16 +69,12 @@ Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 ## Project Structure  
 
 ```plaintext  
-src/  
-├── assets/       # Static assets like images, fonts, etc.  
-├── components/   # Reusable React components.  
-├── pages/        # Page components for routing.  
-├── hooks/        # Custom React hooks.  
-├── utils/        # Utility functions and helpers.  
-├── styles/       # Global and modular CSS/SCSS files.  
+src/ 
+├── components/   # Reusable React components. 
+├── lib/         # Core libraries, utilities, or logic.  
+├── App.css       # Global and modular CSS/SCSS files.  
 ├── App.tsx       # Root component.  
-├── main.tsx      # Entry point.  
-├── vite-env.d.ts # Vite-specific TypeScript definitions.  
+├── main.tsx      # Entry point.
 ```  
 
 ---
