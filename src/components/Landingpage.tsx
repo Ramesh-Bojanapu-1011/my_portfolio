@@ -453,7 +453,7 @@ const Landingpage = () => {
           </div>
           <div className="img-hero">
             <img
-              src="img/hero.png"
+              src="img/hero-preview.png"
               alt=""
               // className="relative top-[1px] left-[1px] w-[540px] h-auto z-10"
             />

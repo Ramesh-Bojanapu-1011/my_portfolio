@@ -293,9 +293,9 @@ section {
 
 .img-hero img {
   position: relative;
-  width: 397px;
-  top: -16px;
-  left: -17px;
+  width: 384px;
+  top: 19px;
+  left: -8px;
   height: auto;
   z-index: 10;
 }
@@ -1059,9 +1059,9 @@ footer {
 @media (max-width: 1440px) {
   .img-hero img {
     position: relative;
-    width: 800px;
-    top: -16px;
-    left: -17px;
+    width: 777px;
+    top: 17px;
+    left: -10px;
     height: auto;
     z-index: 10;
   }
@@ -1073,9 +1073,9 @@ footer {
   }
   .img-hero img {
     position: relative;
-    width: 1000px;
-    top: -16px;
-    left: -17px;
+    width: 981px;
+    top: 17px;
+    left: -13px;
     height: auto;
     z-index: 10;
   }
@@ -1084,41 +1084,40 @@ footer {
 @media (max-width: 1024px) {
   .img-hero img {
     position: relative;
-    width: 1369px;
-    top: -16px;
-    left: -17px;
+    width: 1308px;
+    top: 21px;
+    left: -12px;
     height: auto;
     z-index: 10;
   }
 }
-  @media(min-width: 1800px)and (max-width: 2302px) {
-    .img-hero img {
-      position: relative;
-      width: 528px;
-      top: -16px;
-      left: -17px;
-      height: auto;
-      z-index: 10;
-    }
+@media (min-width: 1800px) and (max-width: 2302px) {
+  .img-hero img {
+    position: relative;
+    width: 494px;
+    top: 20px;
+    left: -9px;
+    height: auto;
+    z-index: 10;
   }
+}
 @media (min-width: 1441px) and (max-width: 1550px) {
   .img-hero img {
     position: relative;
-    width: 800px;
-    top: -32px;
-    left: -26px;
+    width: 683px;
+    top: 22px;
+    left: -8px;
     height: auto;
     z-index: 10;
   }
 }
-
 
 @media (min-width: 1551px) and (max-width: 1800px) {
   .img-hero img {
     position: relative;
-    width: 700px;
-    top: -16px;
-    left: -17px;
+    width: 680px;
+    top: 18px;
+    left: -11px;
     height: auto;
     z-index: 10;
   }
@@ -1133,9 +1132,9 @@ footer {
   }
   .img-hero img {
     position: relative;
-    width: 392px;
-    top: -16px;
-    left: -17px;
+    width: 383px;
+    top: 19px;
+    left: -11px;
     height: auto;
     z-index: 10;
   }
@@ -1220,9 +1219,9 @@ footer {
   }
   .img-hero img {
     position: relative;
-    width: 395px;
-    top: -16px;
-    left: -17px;
+    width: 378px;
+    top: 24px;
+    left: -8px;
     height: auto;
     z-index: 10;
   }
