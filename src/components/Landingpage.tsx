@@ -483,7 +483,7 @@ const Landingpage = () => {
 
         <section className="about caret-transparent" id="about">
           <div className="about-img">
-            <img src="img/aboutMe.png" alt="" className="aboutHero " />
+            <img src="img/aboutMe-preview.png" alt="" className="aboutHero " />
             <div className="showcase-ring">
               <img src="shapes/ring.png" className="ring" alt={""} />
               <img src="shapes/circle.png" className="circle" alt={""} />
