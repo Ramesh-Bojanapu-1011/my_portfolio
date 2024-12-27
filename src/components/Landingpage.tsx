@@ -85,7 +85,7 @@ const Landingpage = () => {
     }
     return age;
   };
-  console.log(calculateAge("2001-06-15"));
+  console.log(calculateAge("2000-11-10"));
   const calcScrollValue = () => {
     const scrollProgress = document.getElementById("progress") as HTMLElement; // Type assertion
     const pos = document.documentElement.scrollTop;
