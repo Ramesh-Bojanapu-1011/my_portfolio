@@ -599,7 +599,7 @@ const Landingpage = () => {
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
                         <strong className="px-1">Email</strong>
-                        <span>bramesh1011@gmailcom</span>
+                        <span>bramesh101020@gmailcom</span>
                       </li>
                       <li className="flex items-center mb-5">
                         <svg
