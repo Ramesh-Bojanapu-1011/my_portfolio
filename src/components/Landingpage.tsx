@@ -485,8 +485,8 @@ const Landingpage = () => {
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
                         <strong className="px-1">Phone:</strong>{" "}
-                        <a href="tel:9603398030">
-                          <span>+91 9603398030</span>
+                        <a href="tel:9380898635">
+                          <span>+91 9380898635</span>
                         </a>
                       </li>
                       <li className="flex items-center mb-5">
