@@ -339,7 +339,7 @@ const Landingpage = () => {
               </div>
 
               <div className="bg-icon">
-                <a href="https://github.com/lovelyram0143" target="_blank">
+                <a href="https://github.com/Ramesh-Bojanapu-1011" target="_blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1151,7 +1151,7 @@ const Landingpage = () => {
         <footer className="py-8 ">
           <div className="px-6 mx-auto ">
             <div className="flex items-center justify-center gap-4">
-              <a href="https://github.com/lovelyram0143" target="_blank">
+              <a href="https://github.com/Ramesh-Bojanapu-1011" target="_blank">
                 <div className="rounded-[20px] p-2 bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
