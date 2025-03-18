@@ -2,15 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  padding: 0;
-  margin: 0;
-
-  box-sizing: border-box;
-  list-style: none;
-  scroll-behavior: smooth;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 :root {
   --bg-color: #e3edf7;
   --gradient-white-bg: linear-gradient(
@@ -27,9 +82,18 @@
   );
   --main-color: #e6006d;
   --font-color: #90979f;
-  --hover-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --hover-box-shadow:
+    rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   --gradient-white-bg2: linear-gradient(98deg, #e5eef7 0%, #fff 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -38,7 +102,7 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: var(--bg-color);
   overflow-x: hidden;
 }
@@ -121,7 +185,7 @@ ul.navlist {
 .menu-icon .bar,
 .menu-icon::after,
 .menu-icon::before {
-  content: "";
+  content: '';
   display: none;
   width: 100%;
   height: 4px;
@@ -196,7 +260,7 @@ section {
 }
 
 .text-animate h2::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 7px;
   left: -3px;
@@ -235,7 +299,8 @@ section {
   border-radius: 5px;
   font-weight: 500;
   color: #000;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   transition: all 0.3s ease;
 }
@@ -323,7 +388,7 @@ section {
 }
 
 .rotate-text span::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 20px;
   background: #00aaff;
@@ -423,7 +488,8 @@ section {
   font-size: 1rem;
   font-weight: 500;
   color: #000;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   margin-right: 0.5rem;
   cursor: pointer;
@@ -482,7 +548,8 @@ section {
 }
 
 .servicesItem {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   padding: 2rem 1rem;
   border-radius: 10px;
@@ -496,7 +563,8 @@ section {
 }
 
 .icon-services i {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   padding: 0.5rem;
   border-radius: 50%;
@@ -540,7 +608,8 @@ section {
 
 .readMore {
   background: var(--gradient-white-bg2);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   padding: 10px 20px;
   border-radius: 5px;
@@ -558,7 +627,8 @@ section {
   align-items: center;
   width: 100%;
   background: var(--gradient-white-bg2);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   margin-top: 8rem;
   border-radius: 10px;
@@ -644,7 +714,8 @@ section {
   border: none;
   font-weight: 500;
   color: #000;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   margin-right: 0.5rem;
   cursor: pointer;
@@ -895,7 +966,8 @@ form .btn {
   margin-bottom: 1rem;
   padding: 20px;
   border-radius: 14px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   display: flex;
   align-items: center;
@@ -906,7 +978,8 @@ form .btn {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  box-shadow: rgba(204, 219, 232) 3px 3px 6px 0px inset,
+  box-shadow:
+    rgba(204, 219, 232) 3px 3px 6px 0px inset,
     rgba(255, 255, 255, 0.5)-3px -3px 6px 1px inset;
 }
 
@@ -914,7 +987,7 @@ form .btn {
   position: absolute;
   top: 0;
   left: 0;
-  padding:10px;
+  padding: 10px;
   width: 100%;
   height: 100%;
 }
@@ -942,7 +1015,6 @@ h2.counter span {
   font-size: 1.7rem;
 }
 
-
 /*======================= footer ============================ */
 footer {
   /* text-align: center; */
@@ -964,7 +1036,8 @@ footer {
   border-radius: 50%;
   color: #1d002c;
   cursor: pointer;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
@@ -1120,7 +1193,7 @@ footer {
   }
 }
 
-@media (width: 1280px)  {
+@media (width: 1280px) {
   .img-hero img {
     position: relative;
     width: 928px;

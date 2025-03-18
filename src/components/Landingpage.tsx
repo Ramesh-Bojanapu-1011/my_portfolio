@@ -1,71 +1,71 @@
 /* eslint-disable no-empty */
-"use client";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useCallback, useEffect, useRef, useState } from "react";
-import Typed from "typed.js";
-import ContactForm from "./ContactForm";
-import { BentoCard, BentoGrid } from "./ui/bento-grid";
+'use client';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import Typed from 'typed.js';
+import ContactForm from './ContactForm';
+import { BentoCard, BentoGrid } from './ui/bento-grid';
 
 const features = [
   {
     // Icon: FileTextIcon,
-    name: "Biodata for Marriage",
+    name: 'Biodata for Marriage',
     description:
-      "Designed and developed multiple customizable templates to efficiently share family and personal details for various use cases.",
-    href: "https://biodataformarriage.net/",
-    cta: "Learn more",
+      'Designed and developed multiple customizable templates to efficiently share family and personal details for various use cases.',
+    href: 'https://biodataformarriage.net/',
+    cta: 'Learn more',
     background: (
       <img
         className="absolute opacity-60"
         src="/biodataformarriage.jpg"
-        alt={""}
+        alt={''}
       />
     ),
     className:
-      "lg:row-start-1 lg:row-end-4 lg:col-start-2 h-[300px] lg:col-end-3",
+      'lg:row-start-1 lg:row-end-4 lg:col-start-2 h-[300px] lg:col-end-3',
   },
   {
     // Icon: InputIcon,
-    name: "RandomGenerator.AI",
+    name: 'RandomGenerator.AI',
     description:
-      "Welcome to RandomGenerator.AI, your one-stop source for all kinds of random data. We make it easy and fun to find random info for any purpose!",
-    href: "https://randomgenerator.ai/",
-    cta: "Learn more",
+      'Welcome to RandomGenerator.AI, your one-stop source for all kinds of random data. We make it easy and fun to find random info for any purpose!',
+    href: 'https://randomgenerator.ai/',
+    cta: 'Learn more',
     background: (
       <img
         className="absolute opacity-60"
         src="/randomgenerator.jpg"
-        alt={""}
+        alt={''}
       />
     ),
     className:
-      "lg:col-start-1 lg:col-end-2 lg:row-start-1 h-[300px] lg:row-end-3",
+      'lg:col-start-1 lg:col-end-2 lg:row-start-1 h-[300px] lg:row-end-3',
   },
   {
     // Icon: GlobeIcon,
-    name: "Dyuti AI - Tools for students to help in their pursuit of dreams",
+    name: 'Dyuti AI - Tools for students to help in their pursuit of dreams',
     description:
-      "Embark on a transformative journey with Dyuti AI as we strive to revolutionize the way students navigate through college admissions and counseling processes.",
-    href: "https://dyuti.ai/",
-    cta: "Learn more",
+      'Embark on a transformative journey with Dyuti AI as we strive to revolutionize the way students navigate through college admissions and counseling processes.',
+    href: 'https://dyuti.ai/',
+    cta: 'Learn more',
     background: (
-      <img className="absolute opacity-60" src="/dyuti.jpg" alt={""} />
+      <img className="absolute opacity-60" src="/dyuti.jpg" alt={''} />
     ),
     className:
-      "lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4",
+      'lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4',
   },
   {
     // Icon: CalendarIcon,
-    name: "5reels",
+    name: '5reels',
     description: `At 5Reels.com, we celebrate the magic of storytelling. Our goal is to connect Telugu movie lovers everywhere with their cultural roots through cinema.`,
-    href: "https://www.5reels.com/",
-    cta: "Learn more",
+    href: 'https://www.5reels.com/',
+    cta: 'Learn more',
     background: (
-      <img className="absolute opacity-60" src="/5reels.jpg" alt={""} />
+      <img className="absolute opacity-60" src="/5reels.jpg" alt={''} />
     ),
     className:
-      "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
+      'lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2',
   },
 ];
 
@@ -85,9 +85,9 @@ const Landingpage = () => {
     }
     return age;
   };
-  console.log(calculateAge("2000-11-10"));
+  console.log(calculateAge('2000-11-10'));
   const calcScrollValue = () => {
-    const scrollProgress = document.getElementById("progress") as HTMLElement; // Type assertion
+    const scrollProgress = document.getElementById('progress') as HTMLElement; // Type assertion
     const pos = document.documentElement.scrollTop;
 
     const calcHeight =
@@ -96,9 +96,9 @@ const Landingpage = () => {
     const scrollValue = Math.round((pos * 100) / calcHeight);
 
     if (pos > 100) {
-      scrollProgress.style.display = "grid";
+      scrollProgress.style.display = 'grid';
     } else {
-      scrollProgress.style.display = "none";
+      scrollProgress.style.display = 'none';
     }
 
     scrollProgress.style.background = `conic-gradient(#fff ${scrollValue}%, #e6006d ${scrollValue}%)`;
@@ -109,8 +109,8 @@ const Landingpage = () => {
     window.onload = calcScrollValue;
 
     // Add click listener once to avoid multiple bindings
-    const scrollProgress = document.getElementById("progress") as HTMLElement;
-    scrollProgress.addEventListener("click", () => {
+    const scrollProgress = document.getElementById('progress') as HTMLElement;
+    scrollProgress.addEventListener('click', () => {
       document.documentElement.scrollTop = 0;
     });
 
@@ -118,7 +118,7 @@ const Landingpage = () => {
     return () => {
       window.onscroll = null;
       window.onload = null;
-      scrollProgress.removeEventListener("click", () => {
+      scrollProgress.removeEventListener('click', () => {
         document.documentElement.scrollTop = 0;
       });
     };
@@ -134,16 +134,16 @@ const Landingpage = () => {
   }, []);
 
   useEffect(() => {
-    const menuLi = document.querySelectorAll("header ul li a");
-    const sections = document.querySelectorAll("section");
+    const menuLi = document.querySelectorAll('header ul li a');
+    const sections = document.querySelectorAll('section');
 
     const activeMenu = () => {
       let len = sections.length;
       while (--len && window.scrollY + 97 < sections[len].offsetTop) {}
 
-      menuLi.forEach((link) => link.classList.remove("active"));
+      menuLi.forEach((link) => link.classList.remove('active'));
       if (menuLi[len]) {
-        menuLi[len].classList.add("active");
+        menuLi[len].classList.add('active');
       }
     };
 
@@ -151,11 +151,11 @@ const Landingpage = () => {
     activeMenu();
 
     // Add event listener for scroll
-    window.addEventListener("scroll", activeMenu);
+    window.addEventListener('scroll', activeMenu);
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("scroll", activeMenu);
+      window.removeEventListener('scroll', activeMenu);
     };
   }, []);
 
@@ -165,7 +165,7 @@ const Landingpage = () => {
     AOS.init({ duration: 1000, delay: 100 });
     // Initialize Typed.js for typing effect
     const typed = new Typed(typedRef.current, {
-      strings: ["Designer", "Developer", "Freelancer", "Full Stack Developer"],
+      strings: ['Designer', 'Developer', 'Freelancer', 'Full Stack Developer'],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1000,
@@ -182,12 +182,12 @@ const Landingpage = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle("open", !isOpen);
+    document.body.classList.toggle('open', !isOpen);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
-    document.body.classList.remove("open");
+    document.body.classList.remove('open');
   };
 
   return (
@@ -199,7 +199,7 @@ const Landingpage = () => {
           </a>
           {/*  */}
           <ul
-            className={`navlist ${isOpen ? "active" : ""}`}
+            className={`navlist ${isOpen ? 'active' : ''}`}
             onClick={closeMenu}
           >
             <li>
@@ -226,7 +226,7 @@ const Landingpage = () => {
               href="#contact"
               className="flex items-center gap-1 align-middle btn"
             >
-              Let&#39;s connect{" "}
+              Let&#39;s connect{' '}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -237,16 +237,16 @@ const Landingpage = () => {
                 <path
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M8 9h8m-8 4h6m-2.01 5.606L8 21v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5.5M19 22v-6m3 3l-3-3l-3 3"
                 />
               </svg>
             </a>
             {/* <Navbar/> */}
             <div
-              className={`menu-icon ${isOpen ? "active" : ""}`}
+              className={`menu-icon ${isOpen ? 'active' : ''}`}
               onClick={toggleMenu}
             >
               <div className="bar"></div>
@@ -274,7 +274,7 @@ const Landingpage = () => {
 
             <div className="btn-box">
               <a href="mailto:bramesh101020@gmail.com" className="btn">
-                Hire Me Now !{" "}
+                Hire Me Now !{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -289,7 +289,7 @@ const Landingpage = () => {
                 </svg>
               </a>
               <a href="img/resume.pdf" target="_blank" className="btn d-CV">
-                Download CV{" "}
+                Download CV{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -339,7 +339,10 @@ const Landingpage = () => {
               </div>
 
               <div className="bg-icon">
-                <a href="https://github.com/Ramesh-Bojanapu-1011" target="_blank">
+                <a
+                  href="https://github.com/Ramesh-Bojanapu-1011"
+                  target="_blank"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -349,9 +352,9 @@ const Landingpage = () => {
                     <rect width="24" height="24" fill="none" />
                     <path
                       fill="currentColor"
-                      // fill-rule="evenodd"
+                      // fillRule="evenodd"
                       d="M12.006 2a9.85 9.85 0 0 0-6.484 2.44a10.32 10.32 0 0 0-3.393 6.17a10.48 10.48 0 0 0 1.317 6.955a10.05 10.05 0 0 0 5.4 4.418c.504.095.683-.223.683-.494c0-.245-.01-1.052-.014-1.908c-2.78.62-3.366-1.21-3.366-1.21a2.7 2.7 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621c.317.044.62.163.885.346c.266.183.487.426.647.71c.135.253.318.476.538.655a2.08 2.08 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37c-2.219-.259-4.554-1.138-4.554-5.07a4.02 4.02 0 0 1 1.031-2.75a3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05c.37.858.406 1.828.101 2.713a4.02 4.02 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.47 2.47 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814c0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421a10.47 10.47 0 0 0 1.313-6.948a10.32 10.32 0 0 0-3.39-6.165A9.85 9.85 0 0 0 12.007 2Z"
-                      // clip-rule="evenodd"
+                      // clipRule="evenodd"
                     />
                   </svg>
                 </a>
@@ -409,13 +412,13 @@ const Landingpage = () => {
             />
             <div className="rotate-text">
               <div className="text">
-                {" "}
+                {' '}
                 <p>
-                  {text.split("").map((char, i) => (
+                  {text.split('').map((char, i) => (
                     <b
                       key={i}
                       style={{
-                        display: "inline-block",
+                        display: 'inline-block',
                         transform: `rotate(${i * 6.3}deg)`,
                       }}
                     >
@@ -435,8 +438,8 @@ const Landingpage = () => {
           <div className="about-img">
             <img src="img/aboutMe-preview.png" alt="" className="aboutHero " />
             <div className="showcase-ring">
-              <img src="shapes/ring.png" className="ring" alt={""} />
-              <img src="shapes/circle.png" className="circle" alt={""} />
+              <img src="shapes/ring.png" className="ring" alt={''} />
+              <img src="shapes/circle.png" className="circle" alt={''} />
             </div>
           </div>
           <div className="about-content">
@@ -460,7 +463,7 @@ const Landingpage = () => {
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 512 512"
                           height="1em"
                           width="1em"
@@ -468,7 +471,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Birthday:</strong>{" "}
+                        <strong className="px-1">Birthday:</strong>{' '}
                         <span>15 june 2001</span>
                       </li>
 
@@ -476,7 +479,7 @@ const Landingpage = () => {
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 512 512"
                           height="1em"
                           width="1em"
@@ -484,7 +487,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Phone:</strong>{" "}
+                        <strong className="px-1">Phone:</strong>{' '}
                         <a href="tel:9380898635">
                           <span>+91 9380898635</span>
                         </a>
@@ -493,7 +496,7 @@ const Landingpage = () => {
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 512 512"
                           height="1em"
                           width="1em"
@@ -501,7 +504,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">City:</strong>{" "}
+                        <strong className="px-1">City:</strong>{' '}
                         <span>Rayachoty</span>
                       </li>
                     </ul>
@@ -512,22 +515,22 @@ const Landingpage = () => {
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 512 512"
                           height="1em"
                           width="1em"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path d="M192 128l128 128-128 128z"></path>
-                        </svg>{" "}
+                        </svg>{' '}
                         <strong className="px-1">Age:</strong>
-                        <span>{calculateAge("2001-06-15")}</span>
+                        <span>{calculateAge('2001-06-15')}</span>
                       </li>
                       <li className="flex items-center mb-5">
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 512 512"
                           height="1em"
                           width="1em"
@@ -535,14 +538,14 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Degree:</strong>{" "}
+                        <strong className="px-1">Degree:</strong>{' '}
                         <span>Btech</span>
                       </li>
                       <li className="flex items-center mb-5">
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 512 512"
                           height="1em"
                           width="1em"
@@ -559,7 +562,7 @@ const Landingpage = () => {
                         <svg
                           stroke="currentColor"
                           fill="currentColor"
-                          stroke-width="0"
+                          strokeWidth="0"
                           viewBox="0 0 512 512"
                           height="1em"
                           width="1em"
@@ -567,7 +570,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Freelance:</strong>{" "}
+                        <strong className="px-1">Freelance:</strong>{' '}
                         <span>Available</span>
                       </li>
                     </ul>
@@ -731,15 +734,15 @@ const Landingpage = () => {
                 Contact Me
               </a>
             </div>
-            <img src="img/support.png" className="first" alt={""} />
+            <img src="img/support.png" className="first" alt={''} />
           </div>
 
           <div className="showcase">
-            <img src="shapes/ring.png" className="ring" alt={""} />
-            <img src="shapes/circle.png" className="circle" alt={""} />
-            <img src="shapes/circle.png" className="circle2" alt={""} />
-            <img src="shapes/circle.png" className="circle3" alt={""} />
-            <img src="shapes/half-ring.png" className="half-ring" alt={""} />
+            <img src="shapes/ring.png" className="ring" alt={''} />
+            <img src="shapes/circle.png" className="circle" alt={''} />
+            <img src="shapes/circle.png" className="circle2" alt={''} />
+            <img src="shapes/circle.png" className="circle3" alt={''} />
+            <img src="shapes/half-ring.png" className="half-ring" alt={''} />
           </div>
         </section>
 
@@ -763,14 +766,14 @@ const Landingpage = () => {
           </div>
 
           <div className="showcase">
-            <img src="shapes/ring.png" className="ring" alt={""} />
+            <img src="shapes/ring.png" className="ring" alt={''} />
             <img
               src="shapes/second-circle.png"
               className="second-circle"
-              alt={""}
+              alt={''}
             />
-            <img src="shapes/circle.png" className="circle" alt={""} />
-            <img src="shapes/half-ring.png" className="half-ring" alt={""} />
+            <img src="shapes/circle.png" className="circle" alt={''} />
+            <img src="shapes/half-ring.png" className="half-ring" alt={''} />
           </div>
         </section>
 
@@ -789,29 +792,27 @@ const Landingpage = () => {
                         {/* <div className="inner-circle"> */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="50"
-                          height="50"
-                          viewBox="0 0 24 24"
+                          width={8.51}
+                          height={12}
+                          viewBox="0 0 256 361"
                         >
-                          <rect width="24" height="24" fill="none" />
-                          <g fill="none">
-                            <g
-                              fill="currentColor"
-                              clip-path="url(#akarIconsHtmlFill0)"
-                            >
-                              <path d="M5.08 0h1.082v1.069h.99V0h1.082v3.236H7.152V2.153h-.99v1.083H5.081zm4.576 1.073h-.952V0h2.987v1.073h-.953v2.163H9.656zM12.165 0h1.128l.694 1.137L14.68 0h1.128v3.236h-1.077V1.632l-.744 1.151h-.019l-.745-1.15v1.603h-1.058zm4.181 0h1.083v2.167h1.52v1.07h-2.603z" />
-                              <path
-                                fill-rule="evenodd"
-                                d="M5.046 22.072L3 4.717h18L18.953 22.07L11.99 24zm4.137-9.5l-.194-2.18h8.145l.19-2.128H6.664l.574 6.437h7.377l-.247 2.76l-2.374.642h-.002l-2.37-.64l-.152-1.697H7.332l.298 3.342l4.36 1.21l4.367-1.21l.532-5.964l.052-.571z"
-                                clip-rule="evenodd"
-                              />
-                            </g>
-                            <defs>
-                              <clipPath id="akarIconsHtmlFill0">
-                                <path fill="#fff" d="M0 0h24v24H0z" />
-                              </clipPath>
-                            </defs>
-                          </g>
+                          <path
+                            fill="#e44d26"
+                            d="m255.555 70.766l-23.241 260.36l-104.47 28.962l-104.182-28.922L.445 70.766z"
+                          ></path>
+                          <path
+                            fill="#f16529"
+                            d="m128 337.95l84.417-23.403l19.86-222.49H128z"
+                          ></path>
+                          <path
+                            fill="#ebebeb"
+                            d="M82.82 155.932H128v-31.937H47.917l.764 8.568l7.85 88.01H128v-31.937H85.739zm7.198 80.61h-32.06l4.474 50.146l65.421 18.16l.147-.04V271.58l-.14.037l-35.568-9.604z"
+                          ></path>
+                          <path d="M24.18 0h16.23v16.035h14.847V0h16.231v48.558h-16.23v-16.26H40.411v16.26h-16.23V0M92.83 16.103H78.544V0h44.814v16.103h-14.295v32.455h-16.23V16.103zM130.47 0h16.923l10.41 17.062L168.203 0h16.93v48.558h-16.164V24.49l-11.166 17.265h-.28L146.35 24.49v24.068h-15.88zm62.74 0h16.235v32.508h22.824v16.05h-39.06z"></path>
+                          <path
+                            fill="#fff"
+                            d="M127.89 220.573h39.327l-3.708 41.42l-35.62 9.614v33.226l65.473-18.145l.48-5.396l7.506-84.08l.779-8.576H127.89zm0-64.719v.078h77.143l.64-7.178l1.456-16.191l.763-8.568H127.89z"
+                          ></path>
                         </svg>
                         {/* <h2 className="counter">
                             <span data-target="89">0</span>%
@@ -820,7 +821,6 @@ const Landingpage = () => {
                       </div>
                       <div className="text-base font-medium">HTML</div>
                     </div>
-
                     <div className="skill">
                       <div className="outer-circle">
                         <svg
@@ -851,7 +851,6 @@ const Landingpage = () => {
                       </div>
                       <div className="text-base font-medium">CSS</div>
                     </div>
-
                     <div className="skill">
                       <div className="outer-circle">
                         <svg
@@ -865,9 +864,9 @@ const Landingpage = () => {
                             <rect width="256" height="256" fill="" rx="60" />
                             <path
                               fill="url(#skillIconsTailwindcssLight0)"
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                               d="M83 110q9-36 45-36c36 0 40.5 27 58.5 31.5q18 4.502 31.5-13.5q-9 36-45 36c-36 0-40.5-27-58.5-31.5Q96.5 92 83 110m-45 54q9-36 45-36c36 0 40.5 27 58.5 31.5q18 4.502 31.5-13.5q-9 36-45 36c-36 0-40.5-27-58.5-31.5q-18-4.502-31.5 13.5"
-                              clip-rule="evenodd"
+                              clipRule="evenodd"
                             />
                             <defs>
                               <linearGradient
@@ -878,8 +877,8 @@ const Landingpage = () => {
                                 y2="185.5"
                                 gradientUnits="userSpaceOnUse"
                               >
-                                <stop stop-color="#32b1c1" />
-                                <stop offset="1" stop-color="#14c6b7" />
+                                <stop stopColor="#32b1c1" />
+                                <stop offset="1" stopColor="#14c6b7" />
                               </linearGradient>
                             </defs>
                           </g>
@@ -912,7 +911,6 @@ const Landingpage = () => {
                       </div>
                       <div className="text-base font-medium">Java Script</div>
                     </div>
-
                     <div className="skill">
                       <div className="outer-circle">
                         <svg
@@ -925,8 +923,8 @@ const Landingpage = () => {
                           <g
                             fill="none"
                             stroke="#91d7e3"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           >
                             <path d="M8 10.8c4.14 0 7.5-1.25 7.5-2.8S12.14 5.2 8 5.2S.5 6.45.5 8s3.36 2.8 7.5 2.8" />
                             <path d="M5.52 9.4c2.07 3.5 4.86 5.72 6.23 4.95c1.37-.78.8-4.24-1.27-7.75C8.41 3.1 5.62.88 4.25 1.65c-1.37.78-.8 4.24 1.27 7.75" />
@@ -954,11 +952,11 @@ const Landingpage = () => {
                               y1="17.487%"
                               y2="89.755%"
                             >
-                              <stop offset="0%" stop-color="#41873f" />
-                              <stop offset="32.88%" stop-color="#418b3d" />
-                              <stop offset="63.52%" stop-color="#419637" />
-                              <stop offset="93.19%" stop-color="#3fa92d" />
-                              <stop offset="100%" stop-color="#3fae2a" />
+                              <stop offset="0%" stopColor="#41873f" />
+                              <stop offset="32.88%" stopColor="#418b3d" />
+                              <stop offset="63.52%" stopColor="#419637" />
+                              <stop offset="93.19%" stopColor="#3fa92d" />
+                              <stop offset="100%" stopColor="#3fae2a" />
                             </linearGradient>
                             <linearGradient
                               id="logosNodejs1"
@@ -967,10 +965,10 @@ const Landingpage = () => {
                               y1="55.169%"
                               y2="-18.306%"
                             >
-                              <stop offset="13.76%" stop-color="#41873f" />
-                              <stop offset="40.32%" stop-color="#54a044" />
-                              <stop offset="71.36%" stop-color="#66b848" />
-                              <stop offset="90.81%" stop-color="#6cc04a" />
+                              <stop offset="13.76%" stopColor="#41873f" />
+                              <stop offset="40.32%" stopColor="#54a044" />
+                              <stop offset="71.36%" stopColor="#66b848" />
+                              <stop offset="90.81%" stopColor="#6cc04a" />
                             </linearGradient>
                             <linearGradient
                               id="logosNodejs2"
@@ -979,10 +977,10 @@ const Landingpage = () => {
                               y1="13.43%"
                               y2="13.43%"
                             >
-                              <stop offset="9.192%" stop-color="#6cc04a" />
-                              <stop offset="28.64%" stop-color="#66b848" />
-                              <stop offset="59.68%" stop-color="#54a044" />
-                              <stop offset="86.24%" stop-color="#41873f" />
+                              <stop offset="9.192%" stopColor="#6cc04a" />
+                              <stop offset="28.64%" stopColor="#66b848" />
+                              <stop offset="59.68%" stopColor="#54a044" />
+                              <stop offset="86.24%" stopColor="#41873f" />
                             </linearGradient>
                             <linearGradient
                               id="logosNodejs3"
@@ -991,10 +989,10 @@ const Landingpage = () => {
                               y1="49.997%"
                               y2="49.997%"
                             >
-                              <stop offset="9.192%" stop-color="#6cc04a" />
-                              <stop offset="28.64%" stop-color="#66b848" />
-                              <stop offset="59.68%" stop-color="#54a044" />
-                              <stop offset="86.24%" stop-color="#41873f" />
+                              <stop offset="9.192%" stopColor="#6cc04a" />
+                              <stop offset="28.64%" stopColor="#66b848" />
+                              <stop offset="59.68%" stopColor="#54a044" />
+                              <stop offset="86.24%" stopColor="#41873f" />
                             </linearGradient>
                             <linearGradient
                               id="logosNodejs4"
@@ -1003,10 +1001,10 @@ const Landingpage = () => {
                               y1="36.21%"
                               y2="36.21%"
                             >
-                              <stop offset="9.192%" stop-color="#6cc04a" />
-                              <stop offset="28.64%" stop-color="#66b848" />
-                              <stop offset="59.68%" stop-color="#54a044" />
-                              <stop offset="86.24%" stop-color="#41873f" />
+                              <stop offset="9.192%" stopColor="#6cc04a" />
+                              <stop offset="28.64%" stopColor="#66b848" />
+                              <stop offset="59.68%" stopColor="#54a044" />
+                              <stop offset="86.24%" stopColor="#41873f" />
                             </linearGradient>
                             <linearGradient
                               id="logosNodejs5"
@@ -1015,10 +1013,10 @@ const Landingpage = () => {
                               y1="50.275%"
                               y2="50.275%"
                             >
-                              <stop offset="9.192%" stop-color="#6cc04a" />
-                              <stop offset="28.64%" stop-color="#66b848" />
-                              <stop offset="59.68%" stop-color="#54a044" />
-                              <stop offset="86.24%" stop-color="#41873f" />
+                              <stop offset="9.192%" stopColor="#6cc04a" />
+                              <stop offset="28.64%" stopColor="#66b848" />
+                              <stop offset="59.68%" stopColor="#54a044" />
+                              <stop offset="86.24%" stopColor="#41873f" />
                             </linearGradient>
                             <linearGradient
                               id="logosNodejs6"
@@ -1027,11 +1025,11 @@ const Landingpage = () => {
                               y1="-211.069%"
                               y2="201.605%"
                             >
-                              <stop offset="0%" stop-color="#41873f" />
-                              <stop offset="32.88%" stop-color="#418b3d" />
-                              <stop offset="63.52%" stop-color="#419637" />
-                              <stop offset="93.19%" stop-color="#3fa92d" />
-                              <stop offset="100%" stop-color="#3fae2a" />
+                              <stop offset="0%" stopColor="#41873f" />
+                              <stop offset="32.88%" stopColor="#418b3d" />
+                              <stop offset="63.52%" stopColor="#419637" />
+                              <stop offset="93.19%" stopColor="#3fa92d" />
+                              <stop offset="100%" stopColor="#3fae2a" />
                             </linearGradient>
                             <path
                               id="logosNodejs7"
@@ -1070,31 +1068,31 @@ const Landingpage = () => {
                                 <path d="M109.797 91.305V35.019c0-2.08-1.271-4.045-3.12-5.085L57.786 1.85a5.1 5.1 0 0 0-1.848-.693l53.511 91.42c.231-.347.347-.809.347-1.271M3.12 29.934C1.272 30.974 0 32.94 0 35.02v56.286c0 2.08 1.387 4.045 3.12 5.085l48.889 28.085q1.734 1.04 3.814.693L3.467 29.818z" />
                                 <path
                                   fill="url(#logosNodejs2)"
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="m50.391.809l-.693.347h.924z"
                                   transform="translate(0 -9.246)"
                                 />
                                 <path
                                   fill="url(#logosNodejs3)"
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="M106.792 105.636c1.387-.809 2.427-2.196 2.89-3.698L56.053 10.402c-1.387-.231-2.89-.116-4.16.693L3.351 39.065l52.355 95.465a8 8 0 0 0 2.196-.693z"
                                   transform="translate(0 -9.246)"
                                 />
                                 <path
                                   fill="url(#logosNodejs4)"
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="m111.3 104.712l-.347-.578v.809z"
                                   transform="translate(0 -9.246)"
                                 />
                                 <path
                                   fill="url(#logosNodejs5)"
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="m106.792 105.636l-48.773 28.085a7 7 0 0 1-2.196.693l.925 1.734l54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814"
                                   transform="translate(0 -9.246)"
                                 />
                                 <path
                                   fill="url(#logosNodejs6)"
-                                  fill-rule="evenodd"
+                                  fillRule="evenodd"
                                   d="m106.792 105.636l-48.773 28.085a7 7 0 0 1-2.196.693l.925 1.734l54.089-31.32v-.694l-1.387-2.312c-.231 1.618-1.271 3.005-2.658 3.814"
                                   transform="translate(0 -9.246)"
                                 />
@@ -1197,7 +1195,7 @@ const Landingpage = () => {
                     <rect width="16" height="16" fill="none" />
                     <path
                       fill="#fff"
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A1 1 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"
                     />
                   </svg>

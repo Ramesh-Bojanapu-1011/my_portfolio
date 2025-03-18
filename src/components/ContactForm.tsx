@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
-import { Textarea } from "./ui/textarea";
+import { useState } from 'react';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
+import { Label } from './ui/label';
+import { Textarea } from './ui/textarea';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
   });
   const handleChange = (e: { target: { name: string; value: string } }) => {
     const { name, value } = e.target;
@@ -22,29 +22,29 @@ const ContactForm = () => {
 
     // Create a FormData object to submit to Google Forms
     const form = new FormData();
-    form.append("entry.1339294955", formData.firstName); // Replace YOUR_FIRSTNAME_FIELD_ID
-    form.append("entry.700629953", formData.lastName); // Replace YOUR_LASTNAME_FIELD_ID
-    form.append("entry.1097293996", formData.email); // Replace YOUR_EMAIL_FIELD_ID
-    form.append("entry.759553117", formData.phone); // Replace YOUR_PHONE_FIELD_ID
-    form.append("entry.15379145", formData.message); // Replace YOUR_MESSAGE_FIELD_ID
+    form.append('entry.1339294955', formData.firstName); // Replace YOUR_FIRSTNAME_FIELD_ID
+    form.append('entry.700629953', formData.lastName); // Replace YOUR_LASTNAME_FIELD_ID
+    form.append('entry.1097293996', formData.email); // Replace YOUR_EMAIL_FIELD_ID
+    form.append('entry.759553117', formData.phone); // Replace YOUR_PHONE_FIELD_ID
+    form.append('entry.15379145', formData.message); // Replace YOUR_MESSAGE_FIELD_ID
 
     fetch(
-      "https://docs.google.com/forms/u/0/d/e/1FAIpQLSf1Kb99sWpeZIR5O7c9JATuHIQdemkPVAcaCaEpvbdeU28TPQ/formResponse",
+      'https://docs.google.com/forms/u/0/d/e/1FAIpQLSf1Kb99sWpeZIR5O7c9JATuHIQdemkPVAcaCaEpvbdeU28TPQ/formResponse',
       {
-        method: "POST",
+        method: 'POST',
         body: form,
-        mode: "no-cors",
+        mode: 'no-cors',
       }
     )
-      .then(() => console.log("Form submitted successfully"))
-      .catch((error) => alert("Error submitting form: " + error));
+      .then(() => console.log('Form submitted successfully'))
+      .catch((error) => alert('Error submitting form: ' + error));
 
     setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      message: "",
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: '',
     });
   };
   return (
