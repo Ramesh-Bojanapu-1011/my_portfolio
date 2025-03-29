@@ -8,7 +8,8 @@ export const metadata: Metadata = {
     icon: "/Logo.png",
     apple: "/Logo.png",
   },
-  keywords: "portfolio app,portfolio my",
+  keywords:
+    "portfolio app,portfolio my, Entry-Level Software Engineer,Fresher Developer,Job-Seeking Developer,Open to Work,Available for Remote Work,Web Developer,Next.js Developer,Full Stack Developer,Frontend Developer",
   authors: [{ name: "Ramesh" }],
   verification: {
     google: "fs3fI4RT8B2j8VUznZ2Lcuuzim3ucHDUWh0rHgeUe54",
