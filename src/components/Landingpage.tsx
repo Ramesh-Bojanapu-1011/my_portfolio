@@ -1,71 +1,71 @@
 /* eslint-disable no-empty */
-'use client';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import Typed from 'typed.js';
-import ContactForm from './ContactForm';
-import { BentoCard, BentoGrid } from './ui/bento-grid';
+"use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useCallback, useEffect, useRef, useState } from "react";
+import Typed from "typed.js";
+import ContactForm from "./ContactForm";
+import { BentoCard, BentoGrid } from "./ui/bento-grid";
 
 const features = [
   {
     // Icon: FileTextIcon,
-    name: 'Biodata for Marriage',
+    name: "Biodata for Marriage",
     description:
-      'Designed and developed multiple customizable templates to efficiently share family and personal details for various use cases.',
-    href: 'https://biodataformarriage.net/',
-    cta: 'Learn more',
+      "Designed and developed multiple customizable templates to efficiently share family and personal details for various use cases.",
+    href: "https://biodataformarriage.net/",
+    cta: "Learn more",
     background: (
       <img
         className="absolute opacity-60"
         src="/biodataformarriage.jpg"
-        alt={''}
+        alt={""}
       />
     ),
     className:
-      'lg:row-start-1 lg:row-end-4 lg:col-start-2 h-[300px] lg:col-end-3',
+      "lg:row-start-1 lg:row-end-4 lg:col-start-2 h-[300px] lg:col-end-3",
   },
   {
     // Icon: InputIcon,
-    name: 'RandomGenerator.AI',
+    name: "RandomGenerator.AI",
     description:
-      'Welcome to RandomGenerator.AI, your one-stop source for all kinds of random data. We make it easy and fun to find random info for any purpose!',
-    href: 'https://randomgenerator.ai/',
-    cta: 'Learn more',
+      "Welcome to RandomGenerator.AI, your one-stop source for all kinds of random data. We make it easy and fun to find random info for any purpose!",
+    href: "https://randomgenerator.ai/",
+    cta: "Learn more",
     background: (
       <img
         className="absolute opacity-60"
         src="/randomgenerator.jpg"
-        alt={''}
+        alt={""}
       />
     ),
     className:
-      'lg:col-start-1 lg:col-end-2 lg:row-start-1 h-[300px] lg:row-end-3',
+      "lg:col-start-1 lg:col-end-2 lg:row-start-1 h-[300px] lg:row-end-3",
   },
   {
     // Icon: GlobeIcon,
-    name: 'Dyuti AI - Tools for students to help in their pursuit of dreams',
+    name: "Dyuti AI - Tools for students to help in their pursuit of dreams",
     description:
-      'Embark on a transformative journey with Dyuti AI as we strive to revolutionize the way students navigate through college admissions and counseling processes.',
-    href: 'https://dyuti.ai/',
-    cta: 'Learn more',
+      "Embark on a transformative journey with Dyuti AI as we strive to revolutionize the way students navigate through college admissions and counseling processes.",
+    href: "https://dyuti.ai/",
+    cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/dyuti.jpg" alt={''} />
+      <img className="absolute opacity-60" src="/dyuti.jpg" alt={""} />
     ),
     className:
-      'lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4',
+      "lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4",
   },
   {
     // Icon: CalendarIcon,
-    name: '5reels',
+    name: "5reels",
     description: `At 5Reels.com, we celebrate the magic of storytelling. Our goal is to connect Telugu movie lovers everywhere with their cultural roots through cinema.`,
-    href: 'https://www.5reels.com/',
-    cta: 'Learn more',
+    href: "https://www.5reels.com/",
+    cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/5reels.jpg" alt={''} />
+      <img className="absolute opacity-60" src="/5reels.jpg" alt={""} />
     ),
     className:
-      'lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2',
+      "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
   },
 ];
 
@@ -85,9 +85,9 @@ const Landingpage = () => {
     }
     return age;
   };
-  console.log(calculateAge('2000-11-10'));
+  console.log(calculateAge("2000-11-10"));
   const calcScrollValue = () => {
-    const scrollProgress = document.getElementById('progress') as HTMLElement; // Type assertion
+    const scrollProgress = document.getElementById("progress") as HTMLElement; // Type assertion
     const pos = document.documentElement.scrollTop;
 
     const calcHeight =
@@ -96,9 +96,9 @@ const Landingpage = () => {
     const scrollValue = Math.round((pos * 100) / calcHeight);
 
     if (pos > 100) {
-      scrollProgress.style.display = 'grid';
+      scrollProgress.style.display = "grid";
     } else {
-      scrollProgress.style.display = 'none';
+      scrollProgress.style.display = "none";
     }
 
     scrollProgress.style.background = `conic-gradient(#fff ${scrollValue}%, #e6006d ${scrollValue}%)`;
@@ -109,8 +109,8 @@ const Landingpage = () => {
     window.onload = calcScrollValue;
 
     // Add click listener once to avoid multiple bindings
-    const scrollProgress = document.getElementById('progress') as HTMLElement;
-    scrollProgress.addEventListener('click', () => {
+    const scrollProgress = document.getElementById("progress") as HTMLElement;
+    scrollProgress.addEventListener("click", () => {
       document.documentElement.scrollTop = 0;
     });
 
@@ -118,7 +118,7 @@ const Landingpage = () => {
     return () => {
       window.onscroll = null;
       window.onload = null;
-      scrollProgress.removeEventListener('click', () => {
+      scrollProgress.removeEventListener("click", () => {
         document.documentElement.scrollTop = 0;
       });
     };
@@ -134,16 +134,16 @@ const Landingpage = () => {
   }, []);
 
   useEffect(() => {
-    const menuLi = document.querySelectorAll('header ul li a');
-    const sections = document.querySelectorAll('section');
+    const menuLi = document.querySelectorAll("header ul li a");
+    const sections = document.querySelectorAll("section");
 
     const activeMenu = () => {
       let len = sections.length;
       while (--len && window.scrollY + 97 < sections[len].offsetTop) {}
 
-      menuLi.forEach((link) => link.classList.remove('active'));
+      menuLi.forEach((link) => link.classList.remove("active"));
       if (menuLi[len]) {
-        menuLi[len].classList.add('active');
+        menuLi[len].classList.add("active");
       }
     };
 
@@ -151,11 +151,11 @@ const Landingpage = () => {
     activeMenu();
 
     // Add event listener for scroll
-    window.addEventListener('scroll', activeMenu);
+    window.addEventListener("scroll", activeMenu);
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', activeMenu);
+      window.removeEventListener("scroll", activeMenu);
     };
   }, []);
 
@@ -165,7 +165,7 @@ const Landingpage = () => {
     AOS.init({ duration: 1000, delay: 100 });
     // Initialize Typed.js for typing effect
     const typed = new Typed(typedRef.current, {
-      strings: ['Designer', 'Developer', 'Freelancer', 'Full Stack Developer'],
+      strings: ["Designer", "Developer", "Freelancer", "Full Stack Developer"],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1000,
@@ -182,12 +182,12 @@ const Landingpage = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle('open', !isOpen);
+    document.body.classList.toggle("open", !isOpen);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
-    document.body.classList.remove('open');
+    document.body.classList.remove("open");
   };
 
   return (
@@ -199,7 +199,7 @@ const Landingpage = () => {
           </a>
           {/*  */}
           <ul
-            className={`navlist ${isOpen ? 'active' : ''}`}
+            className={`navlist ${isOpen ? "active" : ""}`}
             onClick={closeMenu}
           >
             <li>
@@ -226,7 +226,7 @@ const Landingpage = () => {
               href="#contact"
               className="flex items-center gap-1 align-middle btn"
             >
-              Let&#39;s connect{' '}
+              Let&#39;s connect{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -246,7 +246,7 @@ const Landingpage = () => {
             </a>
             {/* <Navbar/> */}
             <div
-              className={`menu-icon ${isOpen ? 'active' : ''}`}
+              className={`menu-icon ${isOpen ? "active" : ""}`}
               onClick={toggleMenu}
             >
               <div className="bar"></div>
@@ -274,7 +274,7 @@ const Landingpage = () => {
 
             <div className="btn-box">
               <a href="mailto:bramesh101020@gmail.com" className="btn">
-                Hire Me Now !{' '}
+                Hire Me Now !{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -289,7 +289,7 @@ const Landingpage = () => {
                 </svg>
               </a>
               <a href="img/resume.pdf" target="_blank" className="btn d-CV">
-                Download CV{' '}
+                Download CV{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -412,13 +412,13 @@ const Landingpage = () => {
             />
             <div className="rotate-text">
               <div className="text">
-                {' '}
+                {" "}
                 <p>
-                  {text.split('').map((char, i) => (
+                  {text.split("").map((char, i) => (
                     <b
                       key={i}
                       style={{
-                        display: 'inline-block',
+                        display: "inline-block",
                         transform: `rotate(${i * 6.3}deg)`,
                       }}
                     >
@@ -438,8 +438,8 @@ const Landingpage = () => {
           <div className="about-img">
             <img src="img/aboutMe-preview.png" alt="" className="aboutHero " />
             <div className="showcase-ring">
-              <img src="shapes/ring.png" className="ring" alt={''} />
-              <img src="shapes/circle.png" className="circle" alt={''} />
+              <img src="shapes/ring.png" className="ring" alt={""} />
+              <img src="shapes/circle.png" className="circle" alt={""} />
             </div>
           </div>
           <div className="about-content">
@@ -471,7 +471,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Birthday:</strong>{' '}
+                        <strong className="px-1">Birthday:</strong>{" "}
                         <span>15 june 2001</span>
                       </li>
 
@@ -487,7 +487,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Phone:</strong>{' '}
+                        <strong className="px-1">Phone:</strong>{" "}
                         <a href="tel:9380898635">
                           <span>+91 9380898635</span>
                         </a>
@@ -504,7 +504,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">City:</strong>{' '}
+                        <strong className="px-1">City:</strong>{" "}
                         <span>Rayachoty</span>
                       </li>
                     </ul>
@@ -522,9 +522,9 @@ const Landingpage = () => {
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path d="M192 128l128 128-128 128z"></path>
-                        </svg>{' '}
+                        </svg>{" "}
                         <strong className="px-1">Age:</strong>
-                        <span>{calculateAge('2001-06-15')}</span>
+                        <span>{calculateAge("2001-06-15")}</span>
                       </li>
                       <li className="flex items-center mb-5">
                         <svg
@@ -538,7 +538,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Degree:</strong>{' '}
+                        <strong className="px-1">Degree:</strong>{" "}
                         <span>Btech</span>
                       </li>
                       <li className="flex items-center mb-5">
@@ -570,26 +570,12 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Freelance:</strong>{' '}
+                        <strong className="px-1">Freelance:</strong>{" "}
                         <span>Available</span>
                       </li>
                     </ul>
                   </div>
                 </div>
-                {/* <div className="text-box">
-                  <div>
-                    <p>User Experience Design - UI / UX</p>
-                    <span>Delight the user and make it work.</span>
-                  </div>
-                </div>
-                <div className="text-box">
-                  <p>Web & User Interface Design - Development</p>
-                  <span>Website , Web Experience , ...</span>
-                </div>
-                <div className="text-box">
-                  <p>Interaction Desing - Animation</p>
-                  <span>I Like to move it move it</span>
-                </div> */}
               </div>
             </div>
             <div className=" cvContent">
@@ -651,7 +637,6 @@ const Landingpage = () => {
                 </i>
 
                 <span></span>
-                {/* <LuLayers /> */}
               </div>
               <h3>App Development</h3>
               <p>
@@ -734,15 +719,15 @@ const Landingpage = () => {
                 Contact Me
               </a>
             </div>
-            <img src="img/support.png" className="first" alt={''} />
+            <img src="img/support.png" className="first" alt={""} />
           </div>
 
           <div className="showcase">
-            <img src="shapes/ring.png" className="ring" alt={''} />
-            <img src="shapes/circle.png" className="circle" alt={''} />
-            <img src="shapes/circle.png" className="circle2" alt={''} />
-            <img src="shapes/circle.png" className="circle3" alt={''} />
-            <img src="shapes/half-ring.png" className="half-ring" alt={''} />
+            <img src="shapes/ring.png" className="ring" alt={""} />
+            <img src="shapes/circle.png" className="circle" alt={""} />
+            <img src="shapes/circle.png" className="circle2" alt={""} />
+            <img src="shapes/circle.png" className="circle3" alt={""} />
+            <img src="shapes/half-ring.png" className="half-ring" alt={""} />
           </div>
         </section>
 
@@ -766,14 +751,14 @@ const Landingpage = () => {
           </div>
 
           <div className="showcase">
-            <img src="shapes/ring.png" className="ring" alt={''} />
+            <img src="shapes/ring.png" className="ring" alt={""} />
             <img
               src="shapes/second-circle.png"
               className="second-circle"
-              alt={''}
+              alt={""}
             />
-            <img src="shapes/circle.png" className="circle" alt={''} />
-            <img src="shapes/half-ring.png" className="half-ring" alt={''} />
+            <img src="shapes/circle.png" className="circle" alt={""} />
+            <img src="shapes/half-ring.png" className="half-ring" alt={""} />
           </div>
         </section>
 
@@ -910,6 +895,30 @@ const Landingpage = () => {
                         </svg>
                       </div>
                       <div className="text-base font-medium">Java Script</div>
+                    </div>
+                    <div className="skill">
+                      <div className="outer-circle">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={48}
+                          height={48}
+                          viewBox="0 0 256 256"
+                        >
+                          <g fill="none">
+                            <rect
+                              width={256}
+                              height={256}
+                              fill=""
+                              rx={60}
+                            ></rect>
+                            <path
+                              fill="#000"
+                              d="M121.451 28.054c-.43.039-1.799.176-3.031.273c-28.406 2.561-55.014 17.889-71.867 41.447C37.17 82.873 31.167 97.731 28.9 113.47c-.801 5.494-.899 7.117-.899 14.565c0 7.449.098 9.072.9 14.565c5.434 37.556 32.16 69.111 68.406 80.802c6.491 2.092 13.333 3.519 21.114 4.379c3.031.332 16.129.332 19.16 0c13.431-1.486 24.809-4.809 36.031-10.538c1.72-.879 2.053-1.114 1.818-1.309c-.156-.118-7.488-9.952-16.285-21.838l-15.992-21.603l-20.04-29.658c-11.026-16.305-20.097-29.639-20.176-29.639c-.078-.019-.156 13.158-.195 29.248c-.059 28.172-.078 29.306-.43 29.97c-.508.958-.899 1.349-1.721 1.78c-.625.312-1.173.371-4.125.371h-3.382l-.9-.567a3.65 3.65 0 0 1-1.31-1.427l-.41-.88l.04-39.198l.058-39.218l.606-.763c.313-.41.978-.938 1.447-1.192c.801-.391 1.114-.43 4.496-.43c3.989 0 4.653.156 5.69 1.29c.293.313 11.143 16.657 24.125 36.344a89122 89122 0 0 0 39.452 59.765l15.836 23.989l.802-.528c7.096-4.614 14.604-11.183 20.547-18.026c12.649-14.526 20.802-32.238 23.539-51.124c.801-5.493.899-7.116.899-14.565s-.098-9.071-.899-14.565c-5.435-37.556-32.161-69.11-68.407-80.801c-6.393-2.073-13.196-3.5-20.821-4.36c-1.877-.196-14.8-.41-16.422-.254m40.938 60.489c.938.469 1.701 1.368 1.975 2.306c.156.509.195 11.379.156 35.875l-.059 35.152l-6.197-9.502l-6.217-9.501v-25.552c0-16.52.078-25.807.195-26.257c.313-1.094.997-1.954 1.936-2.463c.801-.41 1.095-.45 4.164-.45c2.894 0 3.402.04 4.047.392"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div className="text-base font-medium">Next js</div>
                     </div>
                     <div className="skill">
                       <div className="outer-circle">

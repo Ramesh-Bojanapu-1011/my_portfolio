@@ -1,6 +1,6 @@
-'use client';
-import Landingpage from '@/components/Landingpage';
-import React from 'react';
+"use client";
+import Landingpage from "@/components/Landingpage";
+import React from "react";
 
 export default function Home() {
   const [client, setClient] = React.useState(false);
