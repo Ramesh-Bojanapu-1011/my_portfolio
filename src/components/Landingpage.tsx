@@ -67,6 +67,18 @@ const features = [
     className:
       "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
   },
+  {
+    // Icon: CalendarIcon,
+    name: "ChatConnect",
+    description: `Users can register, login, and chat with their friends securely. The app supports direct messaging, read receipts, file sharing, and real-time updates. Conversations are stored securely and sorted by the latest message.`,
+    href: "https://chat-app-front-another.vercel.app/",
+    cta: "Learn more",
+    background: (
+      <img className="absolute opacity-60" src="/chatconnect.jpg" alt={""} />
+    ),
+    className:
+      "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
+  },
 ];
 
 const Landingpage = () => {
