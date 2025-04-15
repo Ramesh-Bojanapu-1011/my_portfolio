@@ -26,6 +26,7 @@ const BentoCard = ({
   name,
   className,
   background,
+  Icon,
   description,
   href,
   cta,
@@ -35,6 +36,7 @@ const BentoCard = ({
   background: ReactNode;
   description: string;
   href: string;
+  Icon?: React.ElementType;
   cta: string;
 }) => (
   <div
@@ -50,6 +52,9 @@ const BentoCard = ({
   >
     <div>{background}</div>
     <div className="z-10 flex flex-col gap-1 p-6 transition-all duration-300 pointer-events-none transform-gpu group-hover:-translate-y-10">
+      {Icon && (
+        <Icon className="w-12 h-12 transition-all duration-300 ease-in-out origin-left transform-gpu text-neutral-700 group-hover:scale-75" />
+      )}
       <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
         {name}
       </h3>
