@@ -657,9 +657,9 @@ const Landingpage = () => {
                 experience. The process involves planning, designing,
                 developing, and testing the application.
               </p>
-              <a href="#" className="readMore">
+              {/* <a href="#" className="readMore">
                 Read More
-              </a>
+              </a> */}
             </div>
 
             <div className="servicesItem">
@@ -687,9 +687,9 @@ const Landingpage = () => {
                 and disciplines such as front-end development, back-end
                 development, full-stack development, and web design.
               </p>
-              <a href="#" className="readMore">
+              {/* <a href="#" className="readMore">
                 Read More
-              </a>
+              </a> */}
             </div>
 
             <div className="servicesItem">
@@ -717,9 +717,9 @@ const Landingpage = () => {
                 icons. It ensures the interface is aesthetically pleasing and
                 functional.
               </p>
-              <a href="#" className="readMore">
+              {/* <a href="#" className="readMore">
                 Read More
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -747,7 +747,7 @@ const Landingpage = () => {
           <div className="main-text">
             <h2 className="heading">Blog</h2>
             <span>Latest News & Post</span>
-            <div>
+            <div className="pt-9">
               <BentoGrid className="flex flex-wrap justify-center gap-4 ">
                 {features.map((feature, index) => (
                   <div
