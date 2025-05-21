@@ -1378,7 +1378,7 @@ const Landingpage = () => {
               </a>
             </div>
             <div className="mt-6 text-sm text-center">
-              <p>&copy; 2024 Ramesh. All rights reserved.</p>
+              <p>&copy; 2025 Ramesh. All rights reserved.</p>
             </div>
           </div>
         </footer>
