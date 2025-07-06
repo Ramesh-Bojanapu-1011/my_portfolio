@@ -120,19 +120,19 @@ const Landingpage = () => {
     window.onscroll = calcScrollValue;
     window.onload = calcScrollValue;
 
-    // Add click listener once to avoid multiple bindings
     const scrollProgress = document.getElementById('progress') as HTMLElement;
-    scrollProgress.addEventListener('click', () => {
-      document.documentElement.scrollTop = 0;
-    });
 
-    // Cleanup on unmount
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    scrollProgress.addEventListener('click', scrollToTop);
+
+    // Cleanup
     return () => {
       window.onscroll = null;
       window.onload = null;
-      scrollProgress.removeEventListener('click', () => {
-        document.documentElement.scrollTop = 0;
-      });
+      scrollProgress.removeEventListener('click', scrollToTop);
     };
   }, []);
 
