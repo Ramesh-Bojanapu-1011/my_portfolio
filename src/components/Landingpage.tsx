@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import Typed from 'typed.js';
 import ContactForm from './ContactForm';
 import { BentoCard, BentoGrid } from './ui/bento-grid';
+import Link from 'next/link';
 
 const features = [
   {
@@ -206,35 +207,35 @@ const Landingpage = () => {
     <>
       <div className="whole-page">
         <header className="caret-transparent">
-          <a href="#" className="logo">
+          <Link href="#home" className="logo">
             <span>R</span>amesh
-          </a>
+          </Link>
           {/*  */}
           <ul
             className={`navlist ${isOpen ? 'active' : ''}`}
             onClick={closeMenu}
           >
             <li>
-              <a href="#home" className="active">
+              <Link href="#home" className="active">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link href="#about">About</Link>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <Link href="#services">Services</Link>
             </li>
 
             <li>
-              <a href="#blog">Blog</a>
+              <Link href="#blog">Blog</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link href="#contact">Contact</Link>
             </li>
           </ul>
           <div className="right-header">
-            <a
+            <Link
               href="#contact"
               className="flex items-center gap-1 align-middle btn"
             >
@@ -255,7 +256,7 @@ const Landingpage = () => {
                   d="M8 9h8m-8 4h6m-2.01 5.606L8 21v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5.5M19 22v-6m3 3l-3-3l-3 3"
                 />
               </svg>
-            </a>
+            </Link>
             {/* <Navbar/> */}
             <div
               className={`menu-icon ${isOpen ? 'active' : ''}`}
@@ -285,7 +286,7 @@ const Landingpage = () => {
             </p>
 
             <div className="btn-box">
-              <a href="mailto:bramesh101020@gmail.com" className="btn">
+              <Link href="mailto:bramesh101020@gmail.com" className="btn">
                 Hire Me Now !{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -299,8 +300,8 @@ const Landingpage = () => {
                     d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"
                   />
                 </svg>
-              </a>
-              <a href="img/resume.pdf" target="_blank" className="btn d-CV">
+              </Link>
+              <Link href="img/resume.pdf" target="_blank" className="btn d-CV">
                 Download CV{' '}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -315,12 +316,12 @@ const Landingpage = () => {
                     d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2z"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <div className="social-media">
               <div className="bg-icon">
-                <a
+                <Link
                   href="https://www.instagram.com/ramesh_bojanapu/"
                   target="_blank"
                 >
@@ -346,12 +347,12 @@ const Landingpage = () => {
                       fill="currentColor"
                     />
                   </svg>
-                </a>
+                </Link>
                 <span></span>
               </div>
 
               <div className="bg-icon">
-                <a
+                <Link
                   href="https://github.com/Ramesh-Bojanapu-1011"
                   target="_blank"
                 >
@@ -369,12 +370,12 @@ const Landingpage = () => {
                       // clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
                 <span></span>
               </div>
 
               <div className="bg-icon">
-                <a
+                <Link
                   href="https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/"
                   target="_blank"
                 >
@@ -390,12 +391,12 @@ const Landingpage = () => {
                       d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2M8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12m12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"
                     />
                   </svg>
-                </a>
+                </Link>
                 <span></span>
               </div>
 
               <div className="bg-icon">
-                <a
+                <Link
                   href="https://www.facebook.com/ramesh.bojanapu.1011"
                   target="_blank"
                 >
@@ -411,7 +412,7 @@ const Landingpage = () => {
                       d="M13.387 7.32c0-.788.174-1.187 1.398-1.187h1.535V3.2h-2.347c-2.933 0-4.106 1.957-4.106 4.107v1.76H7.52V12h2.347v8.8h3.52V12h2.585l.348-2.933h-2.933z"
                     />
                   </svg>
-                </a>
+                </Link>
                 <span></span>
               </div>
             </div>
@@ -500,9 +501,9 @@ const Landingpage = () => {
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
                         <strong className="px-1">Phone:</strong>{' '}
-                        <a href="tel:9380898635">
+                        <Link href="tel:9380898635">
                           <span>+91 9380898635</span>
-                        </a>
+                        </Link>
                       </li>
                       <li className="flex items-center mb-5">
                         <svg
@@ -566,9 +567,12 @@ const Landingpage = () => {
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
                         <strong className="px-1">Email: </strong>
-                        <a href="mailto:bramesh101020@gmailcom" target="_blank">
+                        <Link
+                          href="mailto:bramesh101020@gmailcom"
+                          target="_blank"
+                        >
                           <span>bramesh101020@gmailcom</span>
-                        </a>
+                        </Link>
                       </li>
                       <li className="flex items-center mb-5">
                         <svg
@@ -591,7 +595,7 @@ const Landingpage = () => {
               </div>
             </div>
             <div className=" cvContent">
-              <a
+              <Link
                 href="img/resume.pdf"
                 target="_blank"
                 className="flex btn d-CV w-fit "
@@ -611,7 +615,7 @@ const Landingpage = () => {
                     />
                   </svg>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -622,7 +626,7 @@ const Landingpage = () => {
             <span>what i will do for you</span>
           </div>
 
-          <div className="allServices">
+          <div className="flex flex-wrap justify-center gap-10">
             <div className="servicesItem">
               <div className="icon-services">
                 <i>
@@ -657,9 +661,9 @@ const Landingpage = () => {
                 experience. The process involves planning, designing,
                 developing, and testing the application.
               </p>
-              {/* <a href="#" className="readMore">
+              {/* <Link href="#" className="readMore">
                 Read More
-              </a> */}
+              </Link> */}
             </div>
 
             <div className="servicesItem">
@@ -687,9 +691,9 @@ const Landingpage = () => {
                 and disciplines such as front-end development, back-end
                 development, full-stack development, and web design.
               </p>
-              {/* <a href="#" className="readMore">
+              {/* <Link href="#" className="readMore">
                 Read More
-              </a> */}
+              </Link> */}
             </div>
 
             <div className="servicesItem">
@@ -717,9 +721,9 @@ const Landingpage = () => {
                 icons. It ensures the interface is aesthetically pleasing and
                 functional.
               </p>
-              {/* <a href="#" className="readMore">
+              {/* <Link href="#" className="readMore">
                 Read More
-              </a> */}
+              </Link> */}
             </div>
           </div>
 
@@ -727,9 +731,9 @@ const Landingpage = () => {
             <div className="text-box">
               <span>Get It Touch</span>
               <h3>Have a Project On Your Mind</h3>
-              <a href="#contact" className="btn">
+              <Link href="#contact" className="btn">
                 Contact Me
-              </a>
+              </Link>
             </div>
             <img src="img/support.png" className="first" alt={''} />
           </div>
@@ -925,30 +929,7 @@ const Landingpage = () => {
                       </div>
                       <div className="text-base font-medium">Next js</div>
                     </div>
-                    <div className="skill">
-                      <div className="outer-circle">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="64"
-                          height="64"
-                          viewBox="0 0 16 16"
-                        >
-                          <rect width="16" height="16" fill="none" />
-                          <g
-                            fill="none"
-                            stroke="#91d7e3"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path d="M8 10.8c4.14 0 7.5-1.25 7.5-2.8S12.14 5.2 8 5.2S.5 6.45.5 8s3.36 2.8 7.5 2.8" />
-                            <path d="M5.52 9.4c2.07 3.5 4.86 5.72 6.23 4.95c1.37-.78.8-4.24-1.27-7.75C8.41 3.1 5.62.88 4.25 1.65c-1.37.78-.8 4.24 1.27 7.75" />
-                            <path d="M5.52 6.6c-2.07 3.5-2.64 6.97-1.27 7.75c1.37.77 4.16-1.45 6.23-4.95s2.64-6.97 1.27-7.75C10.38.88 7.59 3.1 5.52 6.6" />
-                            <path d="M8.5 8a.5.5 0 0 1-.5.5a.5.5 0 0 1-.5-.5a.5.5 0 0 1 .5-.5a.5.5 0 0 1 .5.5" />
-                          </g>
-                        </svg>
-                      </div>
-                      <div className="text-base font-medium">React Js</div>
-                    </div>
+
                     <div className="skill">
                       <div className="outer-circle">
                         <svg
@@ -1116,6 +1097,34 @@ const Landingpage = () => {
                         </svg>
                       </div>
                       <div className="text-base font-medium">Node Js</div>
+                    </div>
+                    <div className="skill">
+                      <div className="outer-circle">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={70}
+                          height={70}
+                          viewBox="0 0 256 256"
+                        >
+                          <g fill="none">
+                            <rect
+                              width={256}
+                              height={256}
+                              fill="#092e20"
+                              rx={60}
+                            ></rect>
+                            <path
+                              fill="#fff"
+                              d="M112.689 51h28.615v132.45c-14.679 2.787-25.456 3.902-37.161 3.902C69.209 187.351 51 171.559 51 141.271c0-29.173 19.325-48.124 49.24-48.124c4.645 0 8.175.37 12.449 1.485zm0 66.671c-3.344-1.113-6.131-1.485-9.661-1.485c-14.493 0-22.856 8.919-22.856 24.526c0 15.238 7.991 23.599 22.67 23.599c3.157 0 5.76-.186 9.847-.742z"
+                            ></path>
+                            <path
+                              fill="#fff"
+                              d="M186.826 95.19v66.332c0 22.856-1.672 33.818-6.689 43.295c-4.646 9.106-10.778 14.865-23.413 21.183l-26.571-12.636c12.635-5.945 18.767-11.146 22.668-19.139c4.089-8.175 5.391-17.652 5.391-42.55V95.189zm-28.614-44.038h28.614V80.51h-28.614z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </div>
+                      <div className="text-base font-medium">Django</div>
                     </div>
                     <div className="skill">
                       <div className="outer-circle">
@@ -1294,7 +1303,7 @@ const Landingpage = () => {
               </div>
             </div>
             <div className="contact-info" id="contact">
-              <div className="main-text">
+              <div className="main-text caret-transparent">
                 <h2 className="heading">Contact Me</h2>
                 <span>get in touch with me</span>
               </div>
@@ -1306,7 +1315,10 @@ const Landingpage = () => {
         <footer className="py-8 ">
           <div className="px-6 mx-auto ">
             <div className="flex items-center justify-center gap-4">
-              <a href="https://github.com/Ramesh-Bojanapu-1011" target="_blank">
+              <Link
+                href="https://github.com/Ramesh-Bojanapu-1011"
+                target="_blank"
+              >
                 <div className="rounded-[20px] p-2 bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1321,8 +1333,8 @@ const Landingpage = () => {
                     />
                   </svg>
                 </div>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.facebook.com/ramesh.bojanapu.1011"
                 target="_blank"
               >
@@ -1339,8 +1351,8 @@ const Landingpage = () => {
                     ></path>
                   </svg>
                 </div>
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/"
                 target="_blank"
               >
@@ -1358,8 +1370,8 @@ const Landingpage = () => {
                     />
                   </svg>
                 </div>
-              </a>
-              <a href="mailto:bramesh101020@gmail.com" target="_blank">
+              </Link>
+              <Link href="mailto:bramesh101020@gmail.com" target="_blank">
                 <div className="rounded-[20px] p-2 bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -1375,7 +1387,7 @@ const Landingpage = () => {
                     />
                   </svg>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="mt-6 text-sm text-center">
               <p>&copy; 2025 Ramesh. All rights reserved.</p>
