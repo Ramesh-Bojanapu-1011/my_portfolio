@@ -626,7 +626,7 @@ const Landingpage = () => {
             <span>what i will do for you</span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-10">
+          <div className="allServices flex flex-wrap justify-center gap-10">
             <div className="servicesItem">
               <div className="icon-services">
                 <i>
