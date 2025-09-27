@@ -98,7 +98,7 @@ const Landingpage = () => {
     }
     return age;
   };
-  console.log(calculateAge('2000-11-10'));
+  // console.log("calculateAge",calculateAge('2000-11-10'));
   const calcScrollValue = () => {
     const scrollProgress = document.getElementById('progress') as HTMLElement; // Type assertion
     const pos = document.documentElement.scrollTop;
@@ -1312,7 +1312,7 @@ const Landingpage = () => {
           </div>
         </section>
 
-        <footer className="py-8 ">
+        <footer className="py-8  caret-transparent">
           <div className="px-6 mx-auto ">
             <div className="flex items-center justify-center gap-4">
               <Link
@@ -1389,8 +1389,10 @@ const Landingpage = () => {
                 </div>
               </Link>
             </div>
-            <div className="mt-6 text-sm text-center">
-              <p>&copy; 2025 Ramesh. All rights reserved.</p>
+            <div className="mt-6 text-sm text-center ">
+              <p>
+                &copy; {new Date().getFullYear()} Ramesh. All rights reserved.
+              </p>
             </div>
           </div>
         </footer>
