@@ -96,7 +96,7 @@ const ContactForm = () => {
         <div className="flex items-center justify-center w-full align-middle">
           <Button
             type="submit"
-            className="bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800"
+            className="bg-linear-to-b from-pink-600 to-purple-600 via-purple-800"
           >
             Submit
           </Button>

@@ -903,11 +903,7 @@ const Landingpage = () => {
             </div>
           </div>
           <div className="img-hero">
-            <img
-              src="img/hero-preview.png"
-              alt=""
-              // className="relative top-[1px] left-[1px] w-[540px] h-auto z-10"
-            />
+            <img src="img/hero-preview.png" alt="" />
             <div className="rotate-text">
               <div className="text">
                 <p>
@@ -953,7 +949,7 @@ const Landingpage = () => {
 
             <div className="content-btn">
               <div className="content">
-                <div className="flex flex-col  gap-[10px]  mt-3 md:flex-row md:gap-5">
+                <div className="flex flex-col  gap-2.5  mt-3 md:flex-row md:gap-5">
                   <div className="flex ">
                     <ul>
                       <li className="flex items-center mb-5">
@@ -1306,7 +1302,7 @@ const Landingpage = () => {
                 href="https://github.com/Ramesh-Bojanapu-1011"
                 target="_blank"
               >
-                <div className="rounded-[20px] p-2 bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800">
+                <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -1325,7 +1321,7 @@ const Landingpage = () => {
                 href="https://www.facebook.com/ramesh.bojanapu.1011"
                 target="_blank"
               >
-                <div className="rounded-[20px] p-2 bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800">
+                <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -1343,7 +1339,7 @@ const Landingpage = () => {
                 href="https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/"
                 target="_blank"
               >
-                <div className="rounded-[20px] p-2 bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800">
+                <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
@@ -1359,7 +1355,7 @@ const Landingpage = () => {
                 </div>
               </Link>
               <Link href="mailto:bramesh101020@gmail.com" target="_blank">
-                <div className="rounded-[20px] p-2 bg-gradient-to-b from-pink-600 to-purple-600 via-purple-800">
+                <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
