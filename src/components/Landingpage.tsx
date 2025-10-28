@@ -1,90 +1,90 @@
 /* eslint-disable no-empty */
-'use client';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import Typed from 'typed.js';
-import ContactForm from './ContactForm';
-import { BentoCard, BentoGrid } from './ui/bento-grid';
-import Link from 'next/link';
+"use client";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useCallback, useEffect, useRef, useState } from "react";
+import Typed from "typed.js";
+import ContactForm from "./ContactForm";
+import { BentoCard, BentoGrid } from "./ui/bento-grid";
+import Link from "next/link";
 
 const features = [
   {
     // Icon: FileTextIcon,
-    name: 'Biodata for Marriage',
+    name: "Biodata for Marriage",
     description:
-      'Designed and developed multiple customizable templates to efficiently share family and personal details for various use cases.',
-    href: 'https://biodataformarriage.net/',
-    cta: 'Learn more',
+      "Designed and developed multiple customizable templates to efficiently share family and personal details for various use cases.",
+    href: "https://biodataformarriage.net/",
+    cta: "Learn more",
     background: (
       <img
         className="absolute opacity-60"
         src="/biodataformarriage.jpg"
-        alt={''}
+        alt={""}
       />
     ),
     className:
-      'lg:row-start-1 lg:row-end-4 lg:col-start-2 h-[300px] lg:col-end-3',
+      "lg:row-start-1 lg:row-end-4 lg:col-start-2 h-[300px] lg:col-end-3",
   },
   {
     // Icon: InputIcon,
-    name: 'RandomGenerator.AI',
+    name: "RandomGenerator.AI",
     description:
-      'Welcome to RandomGenerator.AI, your one-stop source for all kinds of random data. We make it easy and fun to find random info for any purpose!',
-    href: 'https://randomgenerator.ai/',
-    cta: 'Learn more',
+      "Welcome to RandomGenerator.AI, your one-stop source for all kinds of random data. We make it easy and fun to find random info for any purpose!",
+    href: "https://randomgenerator.ai/",
+    cta: "Learn more",
     background: (
       <img
         className="absolute opacity-60"
         src="/randomgenerator.jpg"
-        alt={''}
+        alt={""}
       />
     ),
     className:
-      'lg:col-start-1 lg:col-end-2 lg:row-start-1 h-[300px] lg:row-end-3',
+      "lg:col-start-1 lg:col-end-2 lg:row-start-1 h-[300px] lg:row-end-3",
   },
   {
     // Icon: GlobeIcon,
-    name: 'Dyuti AI - Tools for students to help in their pursuit of dreams',
+    name: "Dyuti AI - Tools for students to help in their pursuit of dreams",
     description:
-      'Embark on a transformative journey with Dyuti AI as we strive to revolutionize the way students navigate through college admissions and counseling processes.',
-    href: 'https://dyuti.ai/',
-    cta: 'Learn more',
+      "Embark on a transformative journey with Dyuti AI as we strive to revolutionize the way students navigate through college admissions and counseling processes.",
+    href: "https://dyuti.ai/",
+    cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/dyuti.jpg" alt={''} />
+      <img className="absolute opacity-60" src="/dyuti.jpg" alt={""} />
     ),
     className:
-      'lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4',
+      "lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4",
   },
   {
     // Icon: CalendarIcon,
-    name: '5reels',
+    name: "5reels",
     description: `At 5Reels.com, we celebrate the magic of storytelling. Our goal is to connect Telugu movie lovers everywhere with their cultural roots through cinema.`,
-    href: 'https://www.5reels.com/',
-    cta: 'Learn more',
+    href: "https://www.5reels.com/",
+    cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/5reels.jpg" alt={''} />
+      <img className="absolute opacity-60" src="/5reels.jpg" alt={""} />
     ),
     className:
-      'lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2',
+      "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
   },
   {
     // Icon: CalendarIcon,
-    name: 'ChatConnect',
+    name: "ChatConnect",
     description: `Users can register, login, and chat with their friends securely. The app supports direct messaging, read receipts, file sharing, and real-time updates. Conversations are stored securely and sorted by the latest message.`,
-    href: 'https://chat-app-front-another.vercel.app/',
-    cta: 'Learn more',
+    href: "https://chat-app-front-another.vercel.app/",
+    cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/chatconnect.jpg" alt={''} />
+      <img className="absolute opacity-60" src="/chatconnect.jpg" alt={""} />
     ),
     className:
-      'lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2',
+      "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
   },
 ];
 
 const skills = [
   {
-    name: 'HTML',
+    name: "HTML",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ const skills = [
     ),
   },
   {
-    name: 'CSS',
+    name: "CSS",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const skills = [
     ),
   },
   {
-    name: 'Tailwind CSS',
+    name: "Tailwind CSS",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ const skills = [
     ),
   },
   {
-    name: 'Java Script',
+    name: "Java Script",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@ const skills = [
     ),
   },
   {
-    name: 'Next JS',
+    name: "Next JS",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -207,7 +207,7 @@ const skills = [
     ),
   },
   {
-    name: 'Node JS',
+    name: "Node JS",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -372,7 +372,7 @@ const skills = [
     ),
   },
   {
-    name: 'Django',
+    name: "Django",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +395,7 @@ const skills = [
     ),
   },
   {
-    name: 'Fast api',
+    name: "Fast api",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -423,7 +423,7 @@ const skills = [
     ),
   },
   {
-    name: 'MongoDB',
+    name: "MongoDB",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -570,8 +570,8 @@ const skills = [
 
 const socialLinks = [
   {
-    name: 'Instagram',
-    href: 'https://www.instagram.com/ramesh_bojanapu',
+    name: "Instagram",
+    href: "https://www.instagram.com/ramesh_bojanapu",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -593,8 +593,8 @@ const socialLinks = [
     ),
   },
   {
-    name: 'GitHub',
-    href: 'https://github.com/Ramesh-Bojanapu-1011',
+    name: "GitHub",
+    href: "https://github.com/Ramesh-Bojanapu-1011",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -613,8 +613,8 @@ const socialLinks = [
     ),
   },
   {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ramesh-bojanapu-a5674819a',
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/ramesh-bojanapu-a5674819a",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -631,8 +631,8 @@ const socialLinks = [
     ),
   },
   {
-    name: 'Facebook',
-    href: 'https://www.facebook.com/ramesh.bojanapu.1011',
+    name: "Facebook",
+    href: "https://www.facebook.com/ramesh.bojanapu.1011",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -666,9 +666,9 @@ const Landingpage = () => {
     }
     return age;
   };
-  console.log('calculateAge', calculateAge('2000-11-10'));
+  console.log("calculateAge", calculateAge("2000-11-10"));
   const calcScrollValue = () => {
-    const scrollProgress = document.getElementById('progress') as HTMLElement; // Type assertion
+    const scrollProgress = document.getElementById("progress") as HTMLElement; // Type assertion
     const pos = document.documentElement.scrollTop;
 
     const calcHeight =
@@ -677,9 +677,9 @@ const Landingpage = () => {
     const scrollValue = Math.round((pos * 100) / calcHeight);
 
     if (pos > 100) {
-      scrollProgress.style.display = 'grid';
+      scrollProgress.style.display = "grid";
     } else {
-      scrollProgress.style.display = 'none';
+      scrollProgress.style.display = "none";
     }
 
     scrollProgress.style.background = `conic-gradient(#fff ${scrollValue}%, #e6006d ${scrollValue}%)`;
@@ -689,19 +689,19 @@ const Landingpage = () => {
     window.onscroll = calcScrollValue;
     window.onload = calcScrollValue;
 
-    const scrollProgress = document.getElementById('progress') as HTMLElement;
+    const scrollProgress = document.getElementById("progress") as HTMLElement;
 
     const scrollToTop = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
-    scrollProgress.addEventListener('click', scrollToTop);
+    scrollProgress.addEventListener("click", scrollToTop);
 
     // Cleanup
     return () => {
       window.onscroll = null;
       window.onload = null;
-      scrollProgress.removeEventListener('click', scrollToTop);
+      scrollProgress.removeEventListener("click", scrollToTop);
     };
   }, []);
 
@@ -715,16 +715,16 @@ const Landingpage = () => {
   }, []);
 
   useEffect(() => {
-    const menuLi = document.querySelectorAll('header ul li a');
-    const sections = document.querySelectorAll('section');
+    const menuLi = document.querySelectorAll("header ul li a");
+    const sections = document.querySelectorAll("section");
 
     const activeMenu = () => {
       let len = sections.length;
       while (--len && window.scrollY + 97 < sections[len].offsetTop) {}
 
-      menuLi.forEach((link) => link.classList.remove('active'));
+      menuLi.forEach((link) => link.classList.remove("active"));
       if (menuLi[len]) {
-        menuLi[len].classList.add('active');
+        menuLi[len].classList.add("active");
       }
     };
 
@@ -732,11 +732,11 @@ const Landingpage = () => {
     activeMenu();
 
     // Add event listener for scroll
-    window.addEventListener('scroll', activeMenu);
+    window.addEventListener("scroll", activeMenu);
 
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', activeMenu);
+      window.removeEventListener("scroll", activeMenu);
     };
   }, []);
 
@@ -746,7 +746,7 @@ const Landingpage = () => {
     AOS.init({ duration: 1000, delay: 100 });
     // Initialize Typed.js for typing effect
     const typed = new Typed(typedRef.current, {
-      strings: ['Designer', 'Developer', 'Freelancer', 'Full Stack Developer'],
+      strings: ["Designer", "Developer", "Freelancer", "Full Stack Developer"],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1000,
@@ -763,12 +763,12 @@ const Landingpage = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    document.body.classList.toggle('open', !isOpen);
+    document.body.classList.toggle("open", !isOpen);
   };
 
   const closeMenu = () => {
     setIsOpen(false);
-    document.body.classList.remove('open');
+    document.body.classList.remove("open");
   };
 
   return (
@@ -780,7 +780,7 @@ const Landingpage = () => {
           </Link>
           {/*  */}
           <ul
-            className={`navlist ${isOpen ? 'active' : ''}`}
+            className={`navlist ${isOpen ? "active" : ""}`}
             onClick={closeMenu}
           >
             <li>
@@ -807,7 +807,7 @@ const Landingpage = () => {
               href="#contact"
               className="flex items-center gap-1 align-middle btn"
             >
-              Let&#39;s connect{' '}
+              Let&#39;s connect{" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -827,7 +827,7 @@ const Landingpage = () => {
             </Link>
             {/* <Navbar/> */}
             <div
-              className={`menu-icon ${isOpen ? 'active' : ''}`}
+              className={`menu-icon ${isOpen ? "active" : ""}`}
               onClick={toggleMenu}
             >
               <div className="bar"></div>
@@ -855,7 +855,7 @@ const Landingpage = () => {
 
             <div className="btn-box">
               <Link href="mailto:bramesh101020@gmail.com" className="btn">
-                Hire Me Now !{' '}
+                Hire Me Now !{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -870,7 +870,7 @@ const Landingpage = () => {
                 </svg>
               </Link>
               <Link href="img/resume.pdf" target="_blank" className="btn d-CV">
-                Download CV{' '}
+                Download CV{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -911,7 +911,7 @@ const Landingpage = () => {
                     <b
                       key={i}
                       style={{
-                        display: 'inline-block',
+                        display: "inline-block",
                         transform: `rotate(${i * 6.3}deg)`,
                       }}
                     >
@@ -931,8 +931,8 @@ const Landingpage = () => {
           <div className="about-img">
             <img src="img/aboutMe-preview.png" alt="" className="aboutHero " />
             <div className="showcase-ring">
-              <img src="shapes/ring.png" className="ring" alt={''} />
-              <img src="shapes/circle.png" className="circle" alt={''} />
+              <img src="shapes/ring.png" className="ring" alt={""} />
+              <img src="shapes/circle.png" className="circle" alt={""} />
             </div>
           </div>
           <div className="about-content">
@@ -964,7 +964,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Birthday:</strong>{' '}
+                        <strong className="px-1">Birthday:</strong>{" "}
                         <span>15 june 2001</span>
                       </li>
 
@@ -980,7 +980,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Phone:</strong>{' '}
+                        <strong className="px-1">Phone:</strong>{" "}
                         <Link href="tel:9380898635">
                           <span>+91 9380898635</span>
                         </Link>
@@ -997,7 +997,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">City:</strong>{' '}
+                        <strong className="px-1">City:</strong>{" "}
                         <span>Rayachoty</span>
                       </li>
                     </ul>
@@ -1015,9 +1015,9 @@ const Landingpage = () => {
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path d="M192 128l128 128-128 128z"></path>
-                        </svg>{' '}
+                        </svg>{" "}
                         <strong className="px-1">Age:</strong>
-                        <span>{calculateAge('2001-06-15')}</span>
+                        <span>{calculateAge("2001-06-15")}</span>
                       </li>
                       <li className="flex items-center mb-5">
                         <svg
@@ -1031,7 +1031,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Degree:</strong>{' '}
+                        <strong className="px-1">Degree:</strong>{" "}
                         <span>Btech</span>
                       </li>
                       <li className="flex items-center mb-5">
@@ -1066,7 +1066,7 @@ const Landingpage = () => {
                         >
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
-                        <strong className="px-1">Freelance:</strong>{' '}
+                        <strong className="px-1">Freelance:</strong>{" "}
                         <span>Available</span>
                       </li>
                     </ul>
@@ -1215,15 +1215,15 @@ const Landingpage = () => {
                 Contact Me
               </Link>
             </div>
-            <img src="img/support.png" className="first" alt={''} />
+            <img src="img/support.png" className="first" alt={""} />
           </div>
 
           <div className="showcase">
-            <img src="shapes/ring.png" className="ring" alt={''} />
-            <img src="shapes/circle.png" className="circle" alt={''} />
-            <img src="shapes/circle.png" className="circle2" alt={''} />
-            <img src="shapes/circle.png" className="circle3" alt={''} />
-            <img src="shapes/half-ring.png" className="half-ring" alt={''} />
+            <img src="shapes/ring.png" className="ring" alt={""} />
+            <img src="shapes/circle.png" className="circle" alt={""} />
+            <img src="shapes/circle.png" className="circle2" alt={""} />
+            <img src="shapes/circle.png" className="circle3" alt={""} />
+            <img src="shapes/half-ring.png" className="half-ring" alt={""} />
           </div>
         </section>
 
@@ -1247,14 +1247,14 @@ const Landingpage = () => {
           </div>
 
           <div className="showcase">
-            <img src="shapes/ring.png" className="ring" alt={''} />
+            <img src="shapes/ring.png" className="ring" alt={""} />
             <img
               src="shapes/second-circle.png"
               className="second-circle"
-              alt={''}
+              alt={""}
             />
-            <img src="shapes/circle.png" className="circle" alt={''} />
-            <img src="shapes/half-ring.png" className="half-ring" alt={''} />
+            <img src="shapes/circle.png" className="circle" alt={""} />
+            <img src="shapes/half-ring.png" className="half-ring" alt={""} />
           </div>
         </section>
 
