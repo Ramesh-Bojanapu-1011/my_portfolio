@@ -608,7 +608,7 @@ const socialLinks = [
           fill="currentColor"
           // fillRule="evenodd"
           d="M12.006 2a9.85 9.85 0 0 0-6.484 2.44a10.32 10.32 0 0 0-3.393 6.17a10.48 10.48 0 0 0 1.317 6.955a10.05 10.05 0 0 0 5.4 4.418c.504.095.683-.223.683-.494c0-.245-.01-1.052-.014-1.908c-2.78.62-3.366-1.21-3.366-1.21a2.7 2.7 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621c.317.044.62.163.885.346c.266.183.487.426.647.71c.135.253.318.476.538.655a2.08 2.08 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37c-2.219-.259-4.554-1.138-4.554-5.07a4.02 4.02 0 0 1 1.031-2.75a3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05c.37.858.406 1.828.101 2.713a4.02 4.02 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.47 2.47 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814c0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421a10.47 10.47 0 0 0 1.313-6.948a10.32 10.32 0 0 0-3.39-6.165A9.85 9.85 0 0 0 12.007 2Z"
-          // clipRule="evenodd"
+        // clipRule="evenodd"
         />
       </svg>
     ),
@@ -628,6 +628,15 @@ const socialLinks = [
           fill="currentColor"
           d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2M8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12m12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"
         />
+      </svg>
+    ),
+  },
+  {
+    name: "WhatsApp",
+    href: "https://wa.me/917032014549",
+    svg: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19.074 4.894A9.93 9.93 0 0 0 12.064 2C6.598 2 2.13 6.437 2.13 11.904c0 1.768.45 3.44 1.318 4.983L2.032 22l5.306-1.35c1.447.771 3.087 1.221 4.759 1.221c5.434-.032 9.87-4.47 9.87-9.967c0-2.637-1.028-5.113-2.893-7.01m-7.042 15.273a8.2 8.2 0 0 1-4.212-1.19l-.322-.192l-3.119.803l.869-3.022l-.193-.322A8.53 8.53 0 0 1 3.8 11.84c0-4.534 3.665-8.2 8.231-8.2c2.187 0 4.245.869 5.788 2.412a8.24 8.24 0 0 1 2.412 5.852c.064 4.599-3.666 8.264-8.2 8.264m4.534-6.173c-.257-.129-1.447-.74-1.736-.772c-.225-.097-.418-.129-.547.129c-.129.257-.643.771-.772.964c-.128.129-.257.193-.546.032c-.258-.128-1.03-.353-1.994-1.254c-.74-.643-1.254-1.447-1.35-1.736c-.129-.257-.033-.354.128-.515c.129-.128.258-.257.354-.45c.129-.128.129-.257.257-.418c.129-.128.032-.321-.032-.45c-.096-.128-.547-1.35-.772-1.865c-.193-.514-.418-.418-.546-.418h-.45c-.13 0-.45.032-.644.322c-.225.257-.868.868-.868 2.09s.868 2.347 1.03 2.572c.128.129 1.768 2.669 4.212 3.762c.578.257 1.028.418 1.414.547c.579.193 1.126.128 1.544.096c.482-.032 1.447-.579 1.672-1.19c.193-.546.193-1.093.128-1.19c-.064-.063-.257-.16-.482-.256"></path>
       </svg>
     ),
   },
@@ -721,7 +730,7 @@ export default function Home() {
 
     const activeMenu = () => {
       let len = sections.length;
-      while (--len && window.scrollY + 97 < sections[len].offsetTop) {}
+      while (--len && window.scrollY + 97 < sections[len].offsetTop) { }
 
       menuLi.forEach((link) => link.classList.remove("active"));
       if (menuLi[len]) {
@@ -774,10 +783,24 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ramesh's protfolio</title>
+        <title>Ramesh Bojanapu | Full Stack Developer</title>
         <meta
-          name="description"
-          content="Ramesh's personal portfolio website"
+          property="og:title"
+          content="Ramesh Bojanapu | Full Stack Developer"
+        />
+        <meta
+          property="og:description"
+          content="Portfolio of Ramesh Bojanapu - React, Next.js, Node.js Developer."
+        />
+        <meta name="author" content="Ramesh Bojanapu" />
+        <meta
+          property="og:url"
+          content="https://my-portfolio-theta-six-21.vercel.app/"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://i.postimg.cc/yNyBvVpJ/Ramesh_Portfolio.png"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -954,14 +977,14 @@ export default function Home() {
             </div>
             <div className="about-content">
               <h2 className="m-0 heading">About Me</h2>
-              <h3>2 Year&#39;s Experience on Product Design</h3>
+              <h3>2+ Years of Experience in Front-End & Web Development</h3>
               <p>
-                I’m a passionate front-end developer specializing in React,
-                Next.js, and modern web technologies. With expertise in creating
-                responsive, user-friendly designs, I aim to build seamless
-                digital experiences. I enjoy turning ideas into interactive,
-                functional websites that leave a lasting impression. Let’s
-                create something amazing together!
+                I’m a dedicated Front-End Developer with 2+ years of experience
+                specializing in React.js, Next.js, and modern web technologies.
+                I build responsive, high-performance, and user-friendly web
+                applications that deliver seamless digital experiences. I enjoy
+                transforming ideas into interactive and scalable solutions that
+                create real business impact.
               </p>
 
               <div className="content-btn">
@@ -1153,10 +1176,10 @@ export default function Home() {
                 </div>
                 <h3>App Development</h3>
                 <p>
-                  App development is the process of creating software
-                  applications for businesses to meet their needs and improve
-                  customer experience. The process involves planning, designing,
-                  developing, and testing the application.
+                  I develop scalable and high-performance web applications using
+                  React.js, Next.js, Node.js, and MongoDB. From planning and UI
+                  design to development and deployment, I build secure,
+                  responsive applications tailored to business needs.
                 </p>
                 {/* <Link href="#" className="readMore">
                 Read More
@@ -1183,10 +1206,10 @@ export default function Home() {
                 </div>
                 <h3>Web Development</h3>
                 <p>
-                  Web development involves the creation and maintenance of
-                  websites and web applications. It includes a range of
-                  activities and disciplines such as front-end development,
-                  back-end development, full-stack development, and web design.
+                  I create modern, SEO-optimized websites and full-stack web
+                  solutions using the MERN stack. My focus is on clean
+                  architecture, fast performance, responsive design, and
+                  delivering seamless user experiences across all devices.
                 </p>
                 {/* <Link href="#" className="readMore">
                 Read More
@@ -1213,10 +1236,10 @@ export default function Home() {
                 </div>
                 <h3>UI / UX Design</h3>
                 <p>
-                  UI design focuses on the visual elements of an application or
-                  website, including layout, colors, typography, buttons, and
-                  icons. It ensures the interface is aesthetically pleasing and
-                  functional.
+                  I design intuitive and visually appealing user interfaces with
+                  a strong focus on usability and accessibility. Using modern
+                  design principles, I ensure every website or application is
+                  responsive, engaging, and user-friendly.
                 </p>
                 {/* <Link href="#" className="readMore">
                 Read More
@@ -1371,6 +1394,16 @@ export default function Home() {
                     </svg>
                   </div>
                 </Link>
+                <Link
+                  href="https://wa.me/917032014549"
+                  target="_blank"
+                >
+                  <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+                      <path fill="#ffff" d="M19.074 4.894A9.93 9.93 0 0 0 12.064 2C6.598 2 2.13 6.437 2.13 11.904c0 1.768.45 3.44 1.318 4.983L2.032 22l5.306-1.35c1.447.771 3.087 1.221 4.759 1.221c5.434-.032 9.87-4.47 9.87-9.967c0-2.637-1.028-5.113-2.893-7.01m-7.042 15.273a8.2 8.2 0 0 1-4.212-1.19l-.322-.192l-3.119.803l.869-3.022l-.193-.322A8.53 8.53 0 0 1 3.8 11.84c0-4.534 3.665-8.2 8.231-8.2c2.187 0 4.245.869 5.788 2.412a8.24 8.24 0 0 1 2.412 5.852c.064 4.599-3.666 8.264-8.2 8.264m4.534-6.173c-.257-.129-1.447-.74-1.736-.772c-.225-.097-.418-.129-.547.129c-.129.257-.643.771-.772.964c-.128.129-.257.193-.546.032c-.258-.128-1.03-.353-1.994-1.254c-.74-.643-1.254-1.447-1.35-1.736c-.129-.257-.033-.354.128-.515c.129-.128.258-.257.354-.45c.129-.128.129-.257.257-.418c.129-.128.032-.321-.032-.45c-.096-.128-.547-1.35-.772-1.865c-.193-.514-.418-.418-.546-.418h-.45c-.13 0-.45.032-.644.322c-.225.257-.868.868-.868 2.09s.868 2.347 1.03 2.572c.128.129 1.768 2.669 4.212 3.762c.578.257 1.028.418 1.414.547c.579.193 1.126.128 1.544.096c.482-.032 1.447-.579 1.672-1.19c.193-.546.193-1.093.128-1.19c-.064-.063-.257-.16-.482-.256"></path>
+                    </svg>
+                  </div>
+                </Link>
                 <Link href="mailto:bramesh101020@gmail.com" target="_blank">
                   <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
                     <svg
@@ -1391,7 +1424,8 @@ export default function Home() {
               </div>
               <div className="mt-6 text-sm text-center ">
                 <p>
-                  &copy; {new Date().getFullYear()} Ramesh. All rights reserved.
+                  &copy; {new Date().getFullYear()} Ramesh. All Rights Reserved
+                  — Built with ❤️ using React & Tailwind CSS.
                 </p>
               </div>
             </div>

@@ -20,6 +20,22 @@ export default function Document() {
         <Main />
         <NextScript />
       </body>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Ramesh Bojanapu",
+            url: "https://my-portfolio-theta-six-21.vercel.app/",
+            jobTitle: "Full Stack Developer",
+            sameAs: [
+              "https://github.com/Ramesh-Bojanapu-1011",
+              "https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/",
+            ],
+          }),
+        }}
+      />
     </Html>
   );
 }
