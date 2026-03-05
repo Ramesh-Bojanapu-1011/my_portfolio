@@ -800,7 +800,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://i.postimg.cc/yNyBvVpJ/Ramesh_Portfolio.png"
+          content="https://i.postimg.cc/y6yWHhZf/Ramesh_Portfolio.png"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
