@@ -1260,10 +1260,10 @@ export default function Home() {
 
             <div className="showcase">
               <img src="shapes/ring.png" className="ring" alt={""} />
-              <img src="shapes/circle.png" className="circle" alt={""} />
-              <img src="shapes/circle.png" className="circle2" alt={""} />
-              <img src="shapes/circle.png" className="circle3" alt={""} />
-              <img src="shapes/half-ring.png" className="half-ring" alt={""} />
+              <img src="shapes/circle.png" className="circle  " alt={""} />
+              <img src="shapes/circle.png" className="circle2 " alt={""} />
+              <img src="shapes/circle.png" className="circle3 not-md:hidden" alt={""} />
+              <img src="shapes/half-ring.png" className="half-ring not-md:hidden" alt={""} />
             </div>
           </section>
 
