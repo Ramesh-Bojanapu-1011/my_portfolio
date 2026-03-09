@@ -668,6 +668,30 @@ const socialLinks = [
   },
 ];
 
+const experiences = [
+  {
+    title: "Full Stack Developer",
+    company: "Enkonix | Bengaluru, India",
+    duration: "2025 - Present",
+    description:
+      "Developed and deployed 5+ full-stack web applications using React.js, Next.js, Node.js, and MongoDB. Focused on creating responsive, user-friendly interfaces and scalable backend solutions. Collaborated with clients to translate requirements into technical solutions and delivered projects on schedule.",
+  },
+  {
+    title: "Frontend Developer ",
+    company: "Tech Startup | Remote",
+    duration: "2023 - 2025",
+    description:
+      "Assisted in developing web applications using React.js and Tailwind CSS. Implemented responsive UI components and participated in code reviews. Learned best practices in frontend development and collaborated with a team of experienced developers to deliver quality products.",
+  },
+  {
+    title: "Web Development Enthusiast",
+    company: "Self-Learning | Remote",
+    duration: "2022 - 2023",
+    description:
+      "Started my web development journey by learning HTML, CSS, JavaScript, and React through online courses and practical projects. Built personal projects to strengthen my fundamentals and understand modern web development practices and industry standards.",
+  },
+];
+
 export default function Home() {
   const calculateAge = (dateString: string): number => {
     const today = new Date();
@@ -791,720 +815,888 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ramesh Bojanapu | Full Stack Developer</title>
-        <meta
-          property="og:title"
-          content="Ramesh Bojanapu | Full Stack Developer"
-        />
-        <meta
-          property="og:description"
-          content="Portfolio of Ramesh Bojanapu - React, Next.js, Node.js Developer."
-        />
-        <meta name="author" content="Ramesh Bojanapu" />
-        <meta
-          property="og:url"
-          content="https://my-portfolio-theta-six-21.vercel.app/"
-        />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://i.postimg.cc/y6yWHhZf/Ramesh_Portfolio.png"
-        />
+        <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+          Ramesh Bojanapu - Full Stack Developer | Next.js, React, MERN Stack
+          Expert | Available for Remote Work
+        </title>
       </Head>
-      <>
-        <div className="whole-page">
-          <header className="caret-transparent">
-            <Link href="#home" className="logo">
-              <span>R</span>amesh
-            </Link>
-            {/*  */}
-            <ul
-              className={`navlist ${isOpen ? "active" : ""}`}
-              onClick={closeMenu}
-            >
-              <li>
-                <Link href="#home" className="active">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="#about">About</Link>
-              </li>
-              <li>
-                <Link href="#services">Services</Link>
-              </li>
+      <div className="whole-page">
+        <header className="caret-transparent">
+          <Link href="#home" className="logo">
+            <span>R</span>amesh
+          </Link>
+          {/*  */}
+          <ul
+            className={`navlist ${isOpen ? "active" : ""}`}
+            onClick={closeMenu}
+          >
+            <li>
+              <Link href="#home" className="active">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="#about">About</Link>
+            </li>
+            <li>
+              <Link href="#services">Services</Link>
+            </li>
 
-              <li>
-                <Link href="#blog">Blog</Link>
-              </li>
-              <li>
-                <Link href="#contact">Contact</Link>
-              </li>
-            </ul>
-            <div className="right-header">
-              <Link
-                href="#contact"
-                className="flex items-center gap-1 align-middle btn"
+            <li>
+              <Link href="#blog">Blog</Link>
+            </li>
+
+            <li>
+              <Link href="#experience">Experience</Link>
+            </li>
+            <li>
+              <Link href="#contact">Contact</Link>
+            </li>
+          </ul>
+          <div className="right-header">
+            <Link
+              href="#contact"
+              className="flex items-center gap-1 align-middle btn"
+            >
+              Let&#39;s connect{" "}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
               >
-                Let&#39;s connect{" "}
+                <rect width="24" height="24" fill="none" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M8 9h8m-8 4h6m-2.01 5.606L8 21v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5.5M19 22v-6m3 3l-3-3l-3 3"
+                />
+              </svg>
+            </Link>
+            {/* <Navbar/> */}
+            <div
+              className={`menu-icon ${isOpen ? "active" : ""}`}
+              onClick={toggleMenu}
+            >
+              <div className="bar"></div>
+            </div>
+          </div>
+        </header>
+
+        <section className="home caret-transparent " id="home">
+          <div className="mt-12">
+            <h3 className="text-gray-500 font-light uppercase text-[1.1rem]">
+              Welcome To my World
+            </h3>
+            <h1 className="text-5xl">Hi I&#39;m Ramesh</h1>
+
+            <p className="font-bold text-[24px]">
+              I&#39;m <span ref={typedRef}></span>
+            </p>
+
+            <p>
+              I'm a passionate front-end developer with expertise in React,
+              Next.js, HTML, CSS, Tailwind CSS. I specialize in creating
+              visually appealing, responsive, and user-friendly interfaces that
+              enhance user experiences.
+            </p>
+
+            <div className="btn-box">
+              <Link href="mailto:bramesh101020@gmail.com" className="btn">
+                Hire Me Now !{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                 >
                   <rect width="24" height="24" fill="none" />
                   <path
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 9h8m-8 4h6m-2.01 5.606L8 21v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v5.5M19 22v-6m3 3l-3-3l-3 3"
+                    fill="currentColor"
+                    d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"
                   />
                 </svg>
               </Link>
-              {/* <Navbar/> */}
-              <div
-                className={`menu-icon ${isOpen ? "active" : ""}`}
-                onClick={toggleMenu}
-              >
-                <div className="bar"></div>
+              <Link href="img/resume.pdf" target="_blank" className="btn d-CV">
+                Download CV{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <rect width="24" height="24" fill="none" />
+                  <path fill="currentColor" d="m12 16l4-5h-3V4h-2v7H8z" />
+                  <path
+                    fill="currentColor"
+                    d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2z"
+                  />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="social-media">
+              {socialLinks.map((link) => (
+                <div className="bg-icon" key={link.name}>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    aria-label={`Follow on ${link.name}`}
+                  >
+                    {link.svg}
+                  </Link>
+                  <span></span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="img-hero">
+            <img src="img/hero-preview.png" alt="" />
+            <div className="rotate-text">
+              <div className="text">
+                <p>
+                  {[...Array(text.length)].map((_, i) => (
+                    <b
+                      key={i}
+                      style={{
+                        display: "inline-block",
+                        transform: `rotate(${i * 6.3}deg)`,
+                      }}
+                    >
+                      {text[i]}
+                    </b>
+                  ))}
+                </p>
+              </div>
+              <span>
+                <i></i>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section className="about caret-transparent" id="about">
+          <div className="about-img">
+            <img src="img/aboutMe-preview.png" alt="" className="aboutHero " />
+            <div className="showcase-ring">
+              <img src="shapes/ring.png" className="ring" alt={""} />
+              <img src="shapes/circle.png" className="circle" alt={""} />
+            </div>
+          </div>
+          <div className="about-content">
+            <h2 className="m-0 heading">About Me</h2>
+            <h3>2+ Years of Experience in Front-End & Web Development</h3>
+            <p>
+              I’m a dedicated Front-End Developer with 2+ years of experience
+              specializing in React.js, Next.js, and modern web technologies. I
+              build responsive, high-performance, and user-friendly web
+              applications that deliver seamless digital experiences. I enjoy
+              transforming ideas into interactive and scalable solutions that
+              create real business impact.
+            </p>
+
+            <div className="content-btn">
+              <div className="content">
+                <div className="flex flex-col  gap-2.5  mt-3 md:flex-row md:gap-5">
+                  <div className="flex ">
+                    <ul>
+                      <li className="flex items-center mb-5">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M192 128l128 128-128 128z"></path>
+                        </svg>
+                        <strong className="px-1">Birthday:</strong>{" "}
+                        <span>15 june 2001</span>
+                      </li>
+
+                      <li className="flex items-center mb-5">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M192 128l128 128-128 128z"></path>
+                        </svg>
+                        <strong className="px-1">Phone:</strong>{" "}
+                        <Link href="tel:9380898635">
+                          <span>+91 9380898635</span>
+                        </Link>
+                      </li>
+                      <li className="flex items-center mb-5">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M192 128l128 128-128 128z"></path>
+                        </svg>
+                        <strong className="px-1">City:</strong>{" "}
+                        <span>Rayachoty</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex ">
+                    <ul>
+                      <li className="flex items-center mb-5">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M192 128l128 128-128 128z"></path>
+                        </svg>{" "}
+                        <strong className="px-1">Age:</strong>
+                        <span>{calculateAge("2001-06-15")}</span>
+                      </li>
+                      <li className="flex items-center mb-5">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M192 128l128 128-128 128z"></path>
+                        </svg>
+                        <strong className="px-1">Degree:</strong>{" "}
+                        <span>Btech</span>
+                      </li>
+                      <li className="flex items-center mb-5">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M192 128l128 128-128 128z"></path>
+                        </svg>
+                        <strong className="px-1">Email: </strong>
+                        <Link
+                          href="mailto:bramesh101020@gmailcom"
+                          target="_blank"
+                        >
+                          <span>bramesh101020@gmailcom</span>
+                        </Link>
+                      </li>
+                      <li className="flex items-center mb-5">
+                        <svg
+                          stroke="currentColor"
+                          fill="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 512 512"
+                          height="1em"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M192 128l128 128-128 128z"></path>
+                        </svg>
+                        <strong className="px-1">Freelance:</strong>{" "}
+                        <span>Available</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </header>
-
-          <section className="home caret-transparent " id="home">
-            <div className="mt-12">
-              <h3 className="text-gray-500 font-light uppercase text-[1.1rem]">
-                Welcome To my World
-              </h3>
-              <h1 className="text-5xl">Hi I&#39;m Ramesh</h1>
-
-              <p className="font-bold text-[24px]">
-                I&#39;m <span ref={typedRef}></span>
-              </p>
-
-              <p>
-                I'm a passionate front-end developer with expertise in React,
-                Next.js, HTML, CSS, Tailwind CSS. I specialize in creating
-                visually appealing, responsive, and user-friendly interfaces
-                that enhance user experiences.
-              </p>
-
-              <div className="btn-box">
-                <Link href="mailto:bramesh101020@gmail.com" className="btn">
-                  Hire Me Now !{" "}
+            <div className=" cvContent">
+              <Link
+                href="img/resume.pdf"
+                target="_blank"
+                className="flex btn d-CV w-fit "
+              >
+                <div className="flex gap-2 w-fit">
+                  Download CV
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
                   >
-                    <rect width="24" height="24" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="m11.293 17.293l1.414 1.414L19.414 12l-6.707-6.707l-1.414 1.414L15.586 11H6v2h9.586z"
-                    />
-                  </svg>
-                </Link>
-                <Link
-                  href="img/resume.pdf"
-                  target="_blank"
-                  className="btn d-CV"
-                >
-                  Download CV{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect width="24" height="24" fill="none" />
                     <path fill="currentColor" d="m12 16l4-5h-3V4h-2v7H8z" />
                     <path
                       fill="currentColor"
                       d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2z"
                     />
                   </svg>
-                </Link>
-              </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
 
-              <div className="social-media">
-                {socialLinks.map((link) => (
-                  <div className="bg-icon" key={link.name}>
-                    <Link
-                      href={link.href}
-                      target="_blank"
-                      aria-label={`Follow on ${link.name}`}
-                    >
-                      {link.svg}
-                    </Link>
-                    <span></span>
+        <section className="services caret-transparent" id="services">
+          <div className="main-text">
+            <h2 className="heading">My Services</h2>
+            <span>what i will do for you</span>
+          </div>
+
+          <div className="allServices flex flex-wrap justify-center gap-10">
+            <div className="servicesItem">
+              <div className="icon-services">
+                <i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect width="24" height="24" fill="none" />
+                    <path
+                      fill="currentColor"
+                      d="M22 7.999a1 1 0 0 0-.516-.874l-9.022-5a1 1 0 0 0-.968 0l-8.978 4.96a1 1 0 0 0-.003 1.748l9.022 5.04a1 1 0 0 0 .973.001l8.978-5A1 1 0 0 0 22 7.999m-9.977 3.855L5.06 7.965l6.917-3.822l6.964 3.859z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M20.515 11.126L12 15.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M20.515 15.126L12 19.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
+                    />
+                  </svg>
+                </i>
+
+                <span></span>
+              </div>
+              <h3>App Development</h3>
+              <p>
+                I develop scalable and high-performance web applications using
+                React.js, Next.js, Node.js, and MongoDB. From planning and UI
+                design to development and deployment, I build secure, responsive
+                applications tailored to business needs.
+              </p>
+              {/* <Link href="#" className="readMore">
+                Read More
+              </Link> */}
+            </div>
+
+            <div className="servicesItem">
+              <div className="icon-services">
+                <i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect width="24" height="24" fill="none" />
+                    <path
+                      fill="currentColor"
+                      d="m7.375 16.781l1.25-1.562L4.601 12l4.024-3.219l-1.25-1.562l-5 4a1 1 0 0 0 0 1.562zm9.25-9.562l-1.25 1.562L19.399 12l-4.024 3.219l1.25 1.562l5-4a1 1 0 0 0 0-1.562zm-1.649-4.003l-4 18l-1.953-.434l4-18z"
+                    />
+                  </svg>
+                </i>
+                <span></span>
+              </div>
+              <h3>Web Development</h3>
+              <p>
+                I create modern, SEO-optimized websites and full-stack web
+                solutions using the MERN stack. My focus is on clean
+                architecture, fast performance, responsive design, and
+                delivering seamless user experiences across all devices.
+              </p>
+              {/* <Link href="#" className="readMore">
+                Read More
+              </Link> */}
+            </div>
+
+            <div className="servicesItem">
+              <div className="icon-services">
+                <i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="34"
+                    height="34"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect width="24" height="24" fill="none" />
+                    <path
+                      fill="currentColor"
+                      d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2M4 14V5h16l.002 9z"
+                    />
+                  </svg>
+                </i>
+                <span></span>
+              </div>
+              <h3>UI / UX Design</h3>
+              <p>
+                I design intuitive and visually appealing user interfaces with a
+                strong focus on usability and accessibility. Using modern design
+                principles, I ensure every website or application is responsive,
+                engaging, and user-friendly.
+              </p>
+              {/* <Link href="#" className="readMore">
+                Read More
+              </Link> */}
+            </div>
+          </div>
+
+          <div className="proposal">
+            <div className="text-box">
+              <span>Get It Touch</span>
+              <h3>Have a Project On Your Mind</h3>
+              <Link href="#contact" className="btn">
+                Contact Me
+              </Link>
+            </div>
+            <img src="img/support.png" className="first" alt={""} />
+          </div>
+
+          <div className="showcase">
+            <img src="shapes/ring.png" className="ring" alt={""} />
+            <img src="shapes/circle.png" className="circle  " alt={""} />
+            <img src="shapes/circle.png" className="circle2 " alt={""} />
+            <img
+              src="shapes/circle.png"
+              className="circle3 not-md:hidden"
+              alt={""}
+            />
+            <img
+              src="shapes/half-ring.png"
+              className="half-ring not-md:hidden"
+              alt={""}
+            />
+          </div>
+        </section>
+
+        <section className="blog caret-transparent" id="blog">
+          <div className="main-text">
+            <h2 className="heading">Blog</h2>
+            <span>Latest News & Post</span>
+            <div className="pt-9">
+              <BentoGrid className="flex flex-wrap justify-center gap-4 ">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex w-[400px]"
+                    data-aos="zoom-in"
+                  >
+                    <BentoCard key={feature.name} {...feature} />
                   </div>
                 ))}
+              </BentoGrid>
+            </div>
+          </div>
+
+          <div className="showcase">
+            <img src="shapes/ring.png" className="ring" alt={""} />
+            <img
+              src="shapes/second-circle.png"
+              className="second-circle"
+              alt={""}
+            />
+            <img src="shapes/circle.png" className="circle" alt={""} />
+            <img src="shapes/half-ring.png" className="half-ring" alt={""} />
+          </div>
+        </section>
+
+        <section className="experience caret-transparent" id="experience">
+          <div className="main-text">
+            <h2 className="heading">Experience</h2>
+            <span>My Professional Journey</span>
+          </div>
+
+          <div className="experience-container flex justify-center">
+            <div className="experience-cards-grid w-full px-6">
+              {experiences.map((experience, index) => (
+                <div
+                  key={index}
+                  className="experience-card"
+                  data-aos="zoom-in"
+                  // data-aos-delay={index * 100}
+                >
+                  <div className="experience-card-header">
+                    <span className="duration-badge">
+                      {experience.duration}
+                    </span>
+                  </div>
+                  <div className="experience-card-body">
+                    <h3 className="card-title">{experience.title}</h3>
+                    <p className="card-company">{experience.company}</p>
+                    <p className="card-description">{experience.description}</p>
+                  </div>
+                  <div className="experience-card-footer">
+                    <div className="footer-accent"></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="showcase">
+            <img src="shapes/ring.png" className="ring" alt={""} />
+            <img src="shapes/circle.png" className="circle  " alt={""} />
+            <img src="shapes/circle.png" className="circle2 " alt={""} />
+            <img
+              src="shapes/circle.png"
+              className="circle3 not-md:hidden"
+              alt={""}
+            />
+            <img
+              src="shapes/half-ring.png"
+              className="half-ring not-md:hidden"
+              alt={""}
+            />
+          </div>
+        </section>
+
+        <section className="down-box   ">
+          <div className="contactSkills">
+            <div className="skills caret-transparent">
+              <div className="container">
+                <div className="skillBox">
+                  <div className="main-text">
+                    <h2 className="heading">My Skills</h2>
+                    <span>Let Me Help you</span>
+                  </div>
+                  <div className="skill-wrap">
+                    {skills.map((skill, index) => (
+                      <div
+                        className="skill"
+                        key={index}
+                        data-aos="zoom-in"
+                        data-aos-delay={index * 100}
+                      >
+                        <div className="outer-circle">{skill.svg}</div>
+                        <div className="text-base font-medium">
+                          {skill.name}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="img-hero">
-              <img src="img/hero-preview.png" alt="" />
-              <div className="rotate-text">
-                <div className="text">
-                  <p>
-                    {[...Array(text.length)].map((_, i) => (
-                      <b
-                        key={i}
-                        style={{
-                          display: "inline-block",
-                          transform: `rotate(${i * 6.3}deg)`,
-                        }}
+            <div className="contact-info" id="contact">
+              <div className="main-text caret-transparent">
+                <h2 className="heading">Contact Me</h2>
+                <span>get in touch with me</span>
+              </div>
+              <ContactForm />
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section for AI Search Optimization */}
+        <section className="faq-section py-16 caret-transparent" id="faq">
+          <div className="container faq-shell mx-auto px-6">
+            <div className="main-text faq-heading text-center mb-12">
+              <h2 className="heading text-4xl font-bold mb-4">
+                Frequently Asked Questions
+              </h2>
+              <span className="text-lg">
+                Common questions about my work and expertise
+              </span>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-6 faq-grid">
+              {[
+                {
+                  question:
+                    "What technologies does Ramesh Bojanapu specialize in?",
+                  answer: (
+                    <>
+                      Ramesh Bojanapu specializes in modern web development
+                      technologies including Next.js, React, Node.js, MongoDB,
+                      Django, FastAPI, Tailwind CSS, and the MERN stack. He has
+                      extensive experience in building full-stack web
+                      applications with responsive user interfaces and has
+                      worked on over 5 production projects including AI-powered
+                      educational platforms and real-time messaging
+                      applications.
+                    </>
+                  ),
+                },
+                {
+                  question: "Is Ramesh Bojanapu available for remote work?",
+                  answer: (
+                    <>
+                      Yes, Ramesh Bojanapu is actively available for remote work
+                      opportunities and open to new projects. He specializes in
+                      full-stack development and has experience working on
+                      diverse projects ranging from biodata creation tools to
+                      AI-powered educational platforms. You can contact him
+                      through his portfolio contact form or LinkedIn.
+                    </>
+                  ),
+                },
+                {
+                  question: "What projects has Ramesh Bojanapu worked on?",
+                  answer: (
+                    <>
+                      Ramesh has developed several notable projects including:{" "}
+                      <strong>Biodata for Marriage</strong> (customizable
+                      template platform), <strong>RandomGenerator.AI</strong>{" "}
+                      (random data generation tool), <strong>Dyuti AI</strong>{" "}
+                      (student counseling platform), <strong>5Reels</strong>{" "}
+                      (Telugu movie platform), and <strong>ChatConnect</strong>{" "}
+                      (real-time messaging application with file sharing and
+                      read receipts). Each project demonstrates expertise in
+                      modern web technologies and scalable architecture.
+                    </>
+                  ),
+                },
+                {
+                  question:
+                    "What is Ramesh Bojanapu's experience with Next.js?",
+                  answer: (
+                    <>
+                      Ramesh Bojanapu is an experienced Next.js developer who
+                      has built multiple production applications using Next.js
+                      framework. His portfolio website itself is built with
+                      Next.js 16, showcasing his expertise in modern React
+                      frameworks, server-side rendering, static site generation,
+                      and optimized web performance. He follows best practices
+                      for SEO, accessibility, and performance optimization.
+                    </>
+                  ),
+                },
+                {
+                  question:
+                    "How can I contact Ramesh Bojanapu for collaboration?",
+                  answer: (
+                    <>
+                      You can contact Ramesh Bojanapu through multiple channels:
+                      use the contact form on his portfolio website at{" "}
+                      <a
+                        href="https://my-portfolio-theta-six-21.vercel.app/"
+                        className="text-blue-400 hover:underline"
                       >
-                        {text[i]}
-                      </b>
-                    ))}
+                        my-portfolio-theta-six-21.vercel.app
+                      </a>
+                      , connect with him on LinkedIn at{" "}
+                      <a
+                        href="https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/"
+                        className="text-blue-400 hover:underline"
+                      >
+                        linkedin.com/in/ramesh-bojanapu-a5674819a
+                      </a>
+                      , or view his work on GitHub at{" "}
+                      <a
+                        href="https://github.com/Ramesh-Bojanapu-1011"
+                        className="text-blue-400 hover:underline"
+                      >
+                        github.com/Ramesh-Bojanapu-1011
+                      </a>
+                      .
+                    </>
+                  ),
+                },
+                {
+                  question:
+                    "What makes Ramesh Bojanapu's full-stack development skills unique?",
+                  answer: (
+                    <>
+                      According to his portfolio, Ramesh combines modern
+                      frontend frameworks (React, Next.js) with robust backend
+                      technologies (Node.js, Django, FastAPI) to create
+                      scalable, production-ready applications. His experience
+                      spans multiple domains including e-commerce, AI-powered
+                      tools, content platforms, and real-time communication
+                      systems. He emphasizes clean code, responsive design, and
+                      performance optimization in all projects.
+                    </>
+                  ),
+                },
+              ].map((faq, index) => (
+                <div
+                  key={index}
+                  className="faq-item bg-opacity-10 rounded-lg p-6 border border-gray-700"
+                >
+                  <h3 className="faq-question text-xl font-semibold mb-3">
+                    {faq.question}
+                  </h3>
+                  <p className="faq-answer text-gray-300 leading-relaxed">
+                    {faq.answer}
                   </p>
                 </div>
-                <span>
-                  <i></i>
-                </span>
-              </div>
+              ))}
             </div>
-          </section>
-
-          <section className="about caret-transparent" id="about">
-            <div className="about-img">
-              <img
-                src="img/aboutMe-preview.png"
-                alt=""
-                className="aboutHero "
-              />
-              <div className="showcase-ring">
-                <img src="shapes/ring.png" className="ring" alt={""} />
-                <img src="shapes/circle.png" className="circle" alt={""} />
-              </div>
-            </div>
-            <div className="about-content">
-              <h2 className="m-0 heading">About Me</h2>
-              <h3>2+ Years of Experience in Front-End & Web Development</h3>
-              <p>
-                I’m a dedicated Front-End Developer with 2+ years of experience
-                specializing in React.js, Next.js, and modern web technologies.
-                I build responsive, high-performance, and user-friendly web
-                applications that deliver seamless digital experiences. I enjoy
-                transforming ideas into interactive and scalable solutions that
-                create real business impact.
-              </p>
-
-              <div className="content-btn">
-                <div className="content">
-                  <div className="flex flex-col  gap-2.5  mt-3 md:flex-row md:gap-5">
-                    <div className="flex ">
-                      <ul>
-                        <li className="flex items-center mb-5">
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 512 512"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M192 128l128 128-128 128z"></path>
-                          </svg>
-                          <strong className="px-1">Birthday:</strong>{" "}
-                          <span>15 june 2001</span>
-                        </li>
-
-                        <li className="flex items-center mb-5">
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 512 512"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M192 128l128 128-128 128z"></path>
-                          </svg>
-                          <strong className="px-1">Phone:</strong>{" "}
-                          <Link href="tel:9380898635">
-                            <span>+91 9380898635</span>
-                          </Link>
-                        </li>
-                        <li className="flex items-center mb-5">
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 512 512"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M192 128l128 128-128 128z"></path>
-                          </svg>
-                          <strong className="px-1">City:</strong>{" "}
-                          <span>Rayachoty</span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="flex ">
-                      <ul>
-                        <li className="flex items-center mb-5">
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 512 512"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M192 128l128 128-128 128z"></path>
-                          </svg>{" "}
-                          <strong className="px-1">Age:</strong>
-                          <span>{calculateAge("2001-06-15")}</span>
-                        </li>
-                        <li className="flex items-center mb-5">
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 512 512"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M192 128l128 128-128 128z"></path>
-                          </svg>
-                          <strong className="px-1">Degree:</strong>{" "}
-                          <span>Btech</span>
-                        </li>
-                        <li className="flex items-center mb-5">
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 512 512"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M192 128l128 128-128 128z"></path>
-                          </svg>
-                          <strong className="px-1">Email: </strong>
-                          <Link
-                            href="mailto:bramesh101020@gmailcom"
-                            target="_blank"
-                          >
-                            <span>bramesh101020@gmailcom</span>
-                          </Link>
-                        </li>
-                        <li className="flex items-center mb-5">
-                          <svg
-                            stroke="currentColor"
-                            fill="currentColor"
-                            strokeWidth="0"
-                            viewBox="0 0 512 512"
-                            height="1em"
-                            width="1em"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M192 128l128 128-128 128z"></path>
-                          </svg>
-                          <strong className="px-1">Freelance:</strong>{" "}
-                          <span>Available</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className=" cvContent">
-                <Link
-                  href="img/resume.pdf"
-                  target="_blank"
-                  className="flex btn d-CV w-fit "
-                >
-                  <div className="flex gap-2 w-fit">
-                    Download CV
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path fill="currentColor" d="m12 16l4-5h-3V4h-2v7H8z" />
-                      <path
-                        fill="currentColor"
-                        d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2z"
-                      />
-                    </svg>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </section>
-
-          <section className="services caret-transparent" id="services">
-            <div className="main-text">
-              <h2 className="heading">My Services</h2>
-              <span>what i will do for you</span>
-            </div>
-
-            <div className="allServices flex flex-wrap justify-center gap-10">
-              <div className="servicesItem">
-                <div className="icon-services">
-                  <i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="34"
-                      height="34"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect width="24" height="24" fill="none" />
-                      <path
-                        fill="currentColor"
-                        d="M22 7.999a1 1 0 0 0-.516-.874l-9.022-5a1 1 0 0 0-.968 0l-8.978 4.96a1 1 0 0 0-.003 1.748l9.022 5.04a1 1 0 0 0 .973.001l8.978-5A1 1 0 0 0 22 7.999m-9.977 3.855L5.06 7.965l6.917-3.822l6.964 3.859z"
-                      />
-                      <path
-                        fill="currentColor"
-                        d="M20.515 11.126L12 15.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
-                      />
-                      <path
-                        fill="currentColor"
-                        d="M20.515 15.126L12 19.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
-                      />
-                    </svg>
-                  </i>
-
-                  <span></span>
-                </div>
-                <h3>App Development</h3>
-                <p>
-                  I develop scalable and high-performance web applications using
-                  React.js, Next.js, Node.js, and MongoDB. From planning and UI
-                  design to development and deployment, I build secure,
-                  responsive applications tailored to business needs.
-                </p>
-                {/* <Link href="#" className="readMore">
-                Read More
-              </Link> */}
-              </div>
-
-              <div className="servicesItem">
-                <div className="icon-services">
-                  <i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="34"
-                      height="34"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect width="24" height="24" fill="none" />
-                      <path
-                        fill="currentColor"
-                        d="m7.375 16.781l1.25-1.562L4.601 12l4.024-3.219l-1.25-1.562l-5 4a1 1 0 0 0 0 1.562zm9.25-9.562l-1.25 1.562L19.399 12l-4.024 3.219l1.25 1.562l5-4a1 1 0 0 0 0-1.562zm-1.649-4.003l-4 18l-1.953-.434l4-18z"
-                      />
-                    </svg>
-                  </i>
-                  <span></span>
-                </div>
-                <h3>Web Development</h3>
-                <p>
-                  I create modern, SEO-optimized websites and full-stack web
-                  solutions using the MERN stack. My focus is on clean
-                  architecture, fast performance, responsive design, and
-                  delivering seamless user experiences across all devices.
-                </p>
-                {/* <Link href="#" className="readMore">
-                Read More
-              </Link> */}
-              </div>
-
-              <div className="servicesItem">
-                <div className="icon-services">
-                  <i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="34"
-                      height="34"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect width="24" height="24" fill="none" />
-                      <path
-                        fill="currentColor"
-                        d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2M4 14V5h16l.002 9z"
-                      />
-                    </svg>
-                  </i>
-                  <span></span>
-                </div>
-                <h3>UI / UX Design</h3>
-                <p>
-                  I design intuitive and visually appealing user interfaces with
-                  a strong focus on usability and accessibility. Using modern
-                  design principles, I ensure every website or application is
-                  responsive, engaging, and user-friendly.
-                </p>
-                {/* <Link href="#" className="readMore">
-                Read More
-              </Link> */}
-              </div>
-            </div>
-
-            <div className="proposal">
-              <div className="text-box">
-                <span>Get It Touch</span>
-                <h3>Have a Project On Your Mind</h3>
-                <Link href="#contact" className="btn">
-                  Contact Me
-                </Link>
-              </div>
-              <img src="img/support.png" className="first" alt={""} />
-            </div>
-
-            <div className="showcase">
-              <img src="shapes/ring.png" className="ring" alt={""} />
-              <img src="shapes/circle.png" className="circle  " alt={""} />
-              <img src="shapes/circle.png" className="circle2 " alt={""} />
-              <img
-                src="shapes/circle.png"
-                className="circle3 not-md:hidden"
-                alt={""}
-              />
-              <img
-                src="shapes/half-ring.png"
-                className="half-ring not-md:hidden"
-                alt={""}
-              />
-            </div>
-          </section>
-
-          <section className="blog caret-transparent" id="blog">
-            <div className="main-text">
-              <h2 className="heading">Blog</h2>
-              <span>Latest News & Post</span>
-              <div className="pt-9">
-                <BentoGrid className="flex flex-wrap justify-center gap-4 ">
-                  {features.map((feature, index) => (
-                    <div
-                      key={index}
-                      className="flex w-[400px]"
-                      data-aos="zoom-in"
-                    >
-                      <BentoCard key={feature.name} {...feature} />
-                    </div>
-                  ))}
-                </BentoGrid>
-              </div>
-            </div>
-
-            <div className="showcase">
-              <img src="shapes/ring.png" className="ring" alt={""} />
-              <img
-                src="shapes/second-circle.png"
-                className="second-circle"
-                alt={""}
-              />
-              <img src="shapes/circle.png" className="circle" alt={""} />
-              <img src="shapes/half-ring.png" className="half-ring" alt={""} />
-            </div>
-          </section>
-
-          <section className="down-box">
-            <div className="contactSkills">
-              <div className="skills caret-transparent">
-                <div className="container">
-                  <div className="skillBox">
-                    <div className="main-text">
-                      <h2 className="heading">My Skills</h2>
-                      <span>Let Me Help you</span>
-                    </div>
-                    <div className="skill-wrap">
-                      {skills.map((skill, index) => (
-                        <div
-                          className="skill"
-                          key={index}
-                          data-aos="zoom-in"
-                          data-aos-delay={index * 100}
-                        >
-                          <div className="outer-circle">{skill.svg}</div>
-                          <div className="text-base font-medium">
-                            {skill.name}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="contact-info" id="contact">
-                <div className="main-text caret-transparent">
-                  <h2 className="heading">Contact Me</h2>
-                  <span>get in touch with me</span>
-                </div>
-                <ContactForm />
-              </div>
-            </div>
-          </section>
-
-          <footer className="py-8  caret-transparent">
-            <div className="px-6 mx-auto ">
-              <div className="flex items-center justify-center gap-4">
-                {[
-                  {
-                    link: "https://github.com/Ramesh-Bojanapu-1011",
-                    svg: (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 15 15"
-                        >
-                          <rect width="15" height="15" fill="none" />
-                          <path
-                            fill="#ffff"
-                            d="M9.358 2.145a8.2 8.2 0 0 0-3.716 0c-.706-.433-1.245-.632-1.637-.716a2.2 2.2 0 0 0-.51-.053a1.3 1.3 0 0 0-.232.028l-.01.002l-.004.002h-.003l.137.481l-.137-.48a.5.5 0 0 0-.32.276a3.12 3.12 0 0 0-.159 2.101A3.35 3.35 0 0 0 2 5.93c0 1.553.458 2.597 1.239 3.268c.547.47 1.211.72 1.877.863a2.3 2.3 0 0 0-.116.958v.598c-.407.085-.689.058-.89-.008c-.251-.083-.444-.25-.629-.49a5 5 0 0 1-.27-.402l-.057-.093a9 9 0 0 0-.224-.354c-.19-.281-.472-.633-.928-.753l-.484-.127l-.254.968l.484.127c.08.02.184.095.355.346a7 7 0 0 1 .19.302l.068.11c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.35.116.748.144 1.202.074V14.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-3.562c0-.316-.014-.605-.103-.874c.663-.14 1.322-.39 1.866-.86c.78-.676 1.237-1.73 1.237-3.292v-.001a3.35 3.35 0 0 0-.768-2.125a3.12 3.12 0 0 0-.159-2.1a.5.5 0 0 0-.319-.277l-.137.48c.137-.48.136-.48.135-.48l-.002-.001l-.004-.002l-.009-.002l-.075-.015a1 1 0 0 0-.158-.013a2.2 2.2 0 0 0-.51.053c-.391.084-.93.283-1.636.716"
-                          />
-                        </svg>
-                      </>
-                    ),
-                  },
-                  {
-                    link: "https://www.facebook.com/ramesh.bojanapu.1011",
-                    svg: (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            fill="#fff"
-                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131c.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
-                          ></path>
-                        </svg>
-                      </>
-                    ),
-                  },
-                  {
-                    link: "https://www.instagram.com/ramesh_bojanapu_1011/",
-                    svg: (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={25}
-                        height={25}
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="#fff"
-                          d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5"
-                        ></path>
-                      </svg>
-                    ),
-                  },
-                  {
-                    link: "https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/",
-                    svg: (
-                      <>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="25"
-                          height="25"
-                          viewBox="0 0 24 24"
-                        >
-                          <rect width="24" height="24" fill="none" />
-                          <path
-                            fill="#fff"
-                            d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2M8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12m12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"
-                          />
-                        </svg>
-                      </>
-                    ),
-                  },
-                  {
-                    link: "https://wa.me/917032014549",
-                    svg: (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={25}
-                        height={25}
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="#fff"
-                          d="M21.99 6.547a11 11 0 0 0-.103-1.282a4.3 4.3 0 0 0-.363-1.09A3.85 3.85 0 0 0 19.83 2.48a4.3 4.3 0 0 0-1.083-.362a11 11 0 0 0-1.292-.105c-.183-.007-.42-.01-.53-.01L7.077 2c-.11 0-.347.003-.53.01a11 11 0 0 0-1.282.103a4.3 4.3 0 0 0-1.09.363A3.85 3.85 0 0 0 2.48 4.17a4.3 4.3 0 0 0-.362 1.083a11 11 0 0 0-.106 1.292c-.006.183-.01.42-.01.53L2 16.923c0 .11.003.347.01.53a11 11 0 0 0 .103 1.282a4.3 4.3 0 0 0 .363 1.09A3.85 3.85 0 0 0 4.17 21.52a4.3 4.3 0 0 0 1.083.362a11 11 0 0 0 1.292.105c.183.007.42.01.53.01l9.848.002c.11 0 .347-.003.53-.01a11 11 0 0 0 1.282-.103a4.3 4.3 0 0 0 1.09-.363a3.85 3.85 0 0 0 1.696-1.694a4.3 4.3 0 0 0 .362-1.083a11 11 0 0 0 .106-1.292c.006-.183.01-.42.01-.53L22 7.077c0-.11-.003-.347-.01-.53m-9.773 12.41h-.003a7.1 7.1 0 0 1-3.407-.868l-3.78.991l1.012-3.693a7.13 7.13 0 1 1 6.178 3.57"
-                        ></path>
-                        <path
-                          fill="#fff"
-                          d="M12.22 5.901a5.927 5.927 0 0 0-5.023 9.076l.141.224l-.599 2.186l2.243-.588l.216.128a5.9 5.9 0 0 0 3.016.826h.003A5.926 5.926 0 0 0 12.219 5.9Zm3.484 8.47a1.83 1.83 0 0 1-1.202.847a2.44 2.44 0 0 1-1.122-.07a10 10 0 0 1-1.015-.376a7.94 7.94 0 0 1-3.043-2.689a3.46 3.46 0 0 1-.728-1.842a2 2 0 0 1 .624-1.485a.66.66 0 0 1 .475-.223c.118 0 .237 0 .341.006c.11.005.256-.042.4.306c.15.356.506 1.233.55 1.322a.33.33 0 0 1 .015.312a1.2 1.2 0 0 1-.178.297c-.09.104-.187.232-.267.312c-.09.089-.182.185-.079.363a5.4 5.4 0 0 0 .991 1.234a4.9 4.9 0 0 0 1.433.884c.178.09.282.074.386-.045s.445-.52.564-.698s.237-.148.4-.089s1.04.49 1.218.58s.297.133.341.207a1.5 1.5 0 0 1-.104.847"
-                        ></path>
-                      </svg>
-                    ),
-                  },
-                  {
-                    link: "mailto:bramesh101020@gmail.com",
-                    svg: (
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={25}
-                        height={25}
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          fill="#fff"
-                          d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"
-                        ></path>
-                      </svg>
-                    ),
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="">
-                    <Link href={item.link} target="_blank">
-                      <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
-                        {item.svg}
-                      </div>
-                    </Link>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-6 text-sm text-center ">
-                <p>
-                  &copy; {new Date().getFullYear()} Ramesh. All Rights Reserved
-                  — Built with ❤️ using React & Tailwind CSS.
-                </p>
-              </div>
-            </div>
-          </footer>
-
-          <div id="progress">
-            <span id="progress-value">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-              >
-                <rect width="24" height="24" fill="none" />
-                <path
-                  fill="currentColor"
-                  d="m6.293 11.293l1.414 1.414L12 8.414l4.293 4.293l1.414-1.414L12 5.586z"
-                />
-                <path
-                  fill="currentColor"
-                  d="m6.293 16.293l1.414 1.414L12 13.414l4.293 4.293l1.414-1.414L12 10.586z"
-                />
-              </svg>
-            </span>
           </div>
+        </section>
+
+        <footer className="py-8  caret-transparent">
+          <div className="px-6 mx-auto ">
+            <div className="flex items-center justify-center gap-4">
+              {[
+                {
+                  link: "https://github.com/Ramesh-Bojanapu-1011",
+                  svg: (
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 15 15"
+                      >
+                        <rect width="15" height="15" fill="none" />
+                        <path
+                          fill="#ffff"
+                          d="M9.358 2.145a8.2 8.2 0 0 0-3.716 0c-.706-.433-1.245-.632-1.637-.716a2.2 2.2 0 0 0-.51-.053a1.3 1.3 0 0 0-.232.028l-.01.002l-.004.002h-.003l.137.481l-.137-.48a.5.5 0 0 0-.32.276a3.12 3.12 0 0 0-.159 2.101A3.35 3.35 0 0 0 2 5.93c0 1.553.458 2.597 1.239 3.268c.547.47 1.211.72 1.877.863a2.3 2.3 0 0 0-.116.958v.598c-.407.085-.689.058-.89-.008c-.251-.083-.444-.25-.629-.49a5 5 0 0 1-.27-.402l-.057-.093a9 9 0 0 0-.224-.354c-.19-.281-.472-.633-.928-.753l-.484-.127l-.254.968l.484.127c.08.02.184.095.355.346a7 7 0 0 1 .19.302l.068.11c.094.152.202.32.327.484c.253.33.598.663 1.11.832c.35.116.748.144 1.202.074V14.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-3.562c0-.316-.014-.605-.103-.874c.663-.14 1.322-.39 1.866-.86c.78-.676 1.237-1.73 1.237-3.292v-.001a3.35 3.35 0 0 0-.768-2.125a3.12 3.12 0 0 0-.159-2.1a.5.5 0 0 0-.319-.277l-.137.48c.137-.48.136-.48.135-.48l-.002-.001l-.004-.002l-.009-.002l-.075-.015a1 1 0 0 0-.158-.013a2.2 2.2 0 0 0-.51.053c-.391.084-.93.283-1.636.716"
+                        />
+                      </svg>
+                    </>
+                  ),
+                },
+                {
+                  link: "https://www.facebook.com/ramesh.bojanapu.1011",
+                  svg: (
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill="#fff"
+                          d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131c.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                        ></path>
+                      </svg>
+                    </>
+                  ),
+                },
+                {
+                  link: "https://www.instagram.com/ramesh_bojanapu/",
+                  svg: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={25}
+                      height={25}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#fff"
+                        d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5"
+                      ></path>
+                    </svg>
+                  ),
+                },
+                {
+                  link: "https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/",
+                  svg: (
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="25"
+                        height="25"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect width="24" height="24" fill="none" />
+                        <path
+                          fill="#fff"
+                          d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2M8.09 18.74h-3v-9h3ZM6.59 8.48a1.56 1.56 0 1 1 0-3.12a1.57 1.57 0 1 1 0 3.12m12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06Z"
+                        />
+                      </svg>
+                    </>
+                  ),
+                },
+                {
+                  link: "https://wa.me/917032014549",
+                  svg: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={25}
+                      height={25}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#fff"
+                        d="M21.99 6.547a11 11 0 0 0-.103-1.282a4.3 4.3 0 0 0-.363-1.09A3.85 3.85 0 0 0 19.83 2.48a4.3 4.3 0 0 0-1.083-.362a11 11 0 0 0-1.292-.105c-.183-.007-.42-.01-.53-.01L7.077 2c-.11 0-.347.003-.53.01a11 11 0 0 0-1.282.103a4.3 4.3 0 0 0-1.09.363A3.85 3.85 0 0 0 2.48 4.17a4.3 4.3 0 0 0-.362 1.083a11 11 0 0 0-.106 1.292c-.006.183-.01.42-.01.53L2 16.923c0 .11.003.347.01.53a11 11 0 0 0 .103 1.282a4.3 4.3 0 0 0 .363 1.09A3.85 3.85 0 0 0 4.17 21.52a4.3 4.3 0 0 0 1.083.362a11 11 0 0 0 1.292.105c.183.007.42.01.53.01l9.848.002c.11 0 .347-.003.53-.01a11 11 0 0 0 1.282-.103a4.3 4.3 0 0 0 1.09-.363a3.85 3.85 0 0 0 1.696-1.694a4.3 4.3 0 0 0 .362-1.083a11 11 0 0 0 .106-1.292c.006-.183.01-.42.01-.53L22 7.077c0-.11-.003-.347-.01-.53m-9.773 12.41h-.003a7.1 7.1 0 0 1-3.407-.868l-3.78.991l1.012-3.693a7.13 7.13 0 1 1 6.178 3.57"
+                      ></path>
+                      <path
+                        fill="#fff"
+                        d="M12.22 5.901a5.927 5.927 0 0 0-5.023 9.076l.141.224l-.599 2.186l2.243-.588l.216.128a5.9 5.9 0 0 0 3.016.826h.003A5.926 5.926 0 0 0 12.219 5.9Zm3.484 8.47a1.83 1.83 0 0 1-1.202.847a2.44 2.44 0 0 1-1.122-.07a10 10 0 0 1-1.015-.376a7.94 7.94 0 0 1-3.043-2.689a3.46 3.46 0 0 1-.728-1.842a2 2 0 0 1 .624-1.485a.66.66 0 0 1 .475-.223c.118 0 .237 0 .341.006c.11.005.256-.042.4.306c.15.356.506 1.233.55 1.322a.33.33 0 0 1 .015.312a1.2 1.2 0 0 1-.178.297c-.09.104-.187.232-.267.312c-.09.089-.182.185-.079.363a5.4 5.4 0 0 0 .991 1.234a4.9 4.9 0 0 0 1.433.884c.178.09.282.074.386-.045s.445-.52.564-.698s.237-.148.4-.089s1.04.49 1.218.58s.297.133.341.207a1.5 1.5 0 0 1-.104.847"
+                      ></path>
+                    </svg>
+                  ),
+                },
+                {
+                  link: "mailto:bramesh101020@gmail.com",
+                  svg: (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={25}
+                      height={25}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#fff"
+                        d="M20 18h-2V9.25L12 13L6 9.25V18H4V6h1.2l6.8 4.25L18.8 6H20m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"
+                      ></path>
+                    </svg>
+                  ),
+                },
+              ].map((item, index) => (
+                <div key={index} className="">
+                  <Link href={item.link} target="_blank">
+                    <div className="rounded-[20px] p-2 bg-linear-to-b from-pink-600 to-purple-600 via-purple-800">
+                      {item.svg}
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 text-sm text-center ">
+              <p>
+                &copy; {new Date().getFullYear()} Ramesh. All Rights Reserved —
+                Built with ❤️ using React & Tailwind CSS.
+              </p>
+            </div>
+          </div>
+        </footer>
+
+        <div id="progress">
+          <span id="progress-value">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <rect width="24" height="24" fill="none" />
+              <path
+                fill="currentColor"
+                d="m6.293 11.293l1.414 1.414L12 8.414l4.293 4.293l1.414-1.414L12 5.586z"
+              />
+              <path
+                fill="currentColor"
+                d="m6.293 16.293l1.414 1.414L12 13.414l4.293 4.293l1.414-1.414L12 10.586z"
+              />
+            </svg>
+          </span>
         </div>
-      </>
+      </div>
     </>
   );
 }
