@@ -1487,26 +1487,26 @@ export default function Home() {
                     <>
                       You can contact Ramesh Bojanapu through multiple channels:
                       use the contact form on his portfolio website at{" "}
-                      <a
+                      <Link
                         href="https://my-portfolio-theta-six-21.vercel.app/"
                         className="text-blue-400 hover:underline"
                       >
                         my-portfolio-theta-six-21.vercel.app
-                      </a>
+                      </Link>
                       , connect with him on LinkedIn at{" "}
-                      <a
+                      <Link
                         href="https://www.linkedin.com/in/ramesh-bojanapu-a5674819a/"
                         className="text-blue-400 hover:underline"
                       >
                         linkedin.com/in/ramesh-bojanapu-a5674819a
-                      </a>
+                      </Link>
                       , or view his work on GitHub at{" "}
-                      <a
+                      <Link
                         href="https://github.com/Ramesh-Bojanapu-1011"
                         className="text-blue-400 hover:underline"
                       >
                         github.com/Ramesh-Bojanapu-1011
-                      </a>
+                      </Link>
                       .
                     </>
                   ),
