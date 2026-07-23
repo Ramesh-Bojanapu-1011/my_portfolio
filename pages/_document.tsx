@@ -7,7 +7,7 @@ export default function Document() {
         {/* SEO Meta Tags */}
         <meta
           name="description"
-          content="Ramesh Bojanapu - Full Stack Developer specializing in Next.js, React, Node.js, MongoDB, and Django. Available for remote work opportunities. Portfolio showcasing innovative web applications and projects."
+          content="Ramesh Bojanapu is a full stack developer in India building fast, accessible web applications with Next.js, React, Node.js, MongoDB, Django, and FastAPI."
         />
         <meta
           name="keywords"
@@ -15,8 +15,9 @@ export default function Document() {
         />
         <meta name="author" content="Ramesh Bojanapu" />
         <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large" />
+        <meta name="bingbot" content="index, follow, max-image-preview:large" />
         <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
 
         {/* Google Site Verification */}
         <meta
@@ -32,11 +33,11 @@ export default function Document() {
         />
         <meta
           property="og:title"
-          content="Ramesh Bojanapu - Full Stack Developer | Portfolio"
+          content="Ramesh Bojanapu | Full Stack Developer in India"
         />
         <meta
           property="og:description"
-          content="Full Stack Developer specializing in Next.js, React, MERN Stack, and modern web technologies. View my projects and get in touch for collaboration."
+          content="Portfolio of Ramesh Bojanapu, a full stack developer building accessible, responsive web applications with Next.js, React, Node.js, and MongoDB."
         />
         <meta
           property="og:image"
@@ -44,6 +45,7 @@ export default function Document() {
         />
         <meta property="og:site_name" content="Ramesh Bojanapu Portfolio" />
         <meta property="og:locale" content="en_US" />
+        <meta property="og:image:alt" content="Ramesh Bojanapu, full stack developer" />
 
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -53,16 +55,18 @@ export default function Document() {
         />
         <meta
           name="twitter:title"
-          content="Ramesh Bojanapu - Full Stack Developer | Portfolio"
+          content="Ramesh Bojanapu | Full Stack Developer in India"
         />
         <meta
           name="twitter:description"
-          content="Full Stack Developer specializing in Next.js, React, MERN Stack, and modern web technologies. View my projects and get in touch."
+          content="Explore the portfolio and projects of Ramesh Bojanapu, a full stack developer specializing in Next.js, React, Node.js, and MongoDB."
         />
         <meta
           name="twitter:image"
           content="https://i.postimg.cc/y6yWHhZf/Ramesh_Portfolio.png"
         />
+        <meta name="twitter:image:alt" content="Ramesh Bojanapu, full stack developer" />
+        <meta name="twitter:creator" content="@ramesh_bojanapu" />
 
         {/* Favicon */}
         <link rel="icon" href="/Logo.png" />
@@ -90,6 +94,12 @@ export default function Document() {
               url: "https://my-portfolio-theta-six-21.vercel.app/",
               image: "https://i.postimg.cc/y6yWHhZf/Ramesh_Portfolio.png",
               jobTitle: "Full Stack Developer",
+              email: "bramesh101020@gmail.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Rayachoty",
+                addressCountry: "IN",
+              },
               description:
                 "Full Stack Developer specializing in Next.js, React, Node.js, MongoDB, Django, and FastAPI. Expert in building scalable web applications and modern user interfaces.",
               knowsAbout: [

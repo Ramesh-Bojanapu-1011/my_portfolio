@@ -21,7 +21,7 @@ const features = [
       <img
         className="absolute opacity-60"
         src="/biodataformarriage.jpg"
-        alt={""}
+        alt="Biodata for Marriage template platform preview"
       />
     ),
     className:
@@ -38,7 +38,7 @@ const features = [
       <img
         className="absolute opacity-60"
         src="/randomgenerator.jpg"
-        alt={""}
+        alt="RandomGenerator.AI random data tool preview"
       />
     ),
     className:
@@ -52,7 +52,7 @@ const features = [
     href: "https://dyuti.ai/",
     cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/dyuti.jpg" alt={""} />
+      <img className="absolute opacity-60" src="/dyuti.jpg" alt="Dyuti AI student counseling platform preview" />
     ),
     className:
       "lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4",
@@ -64,7 +64,7 @@ const features = [
     href: "https://www.5reels.com/",
     cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/5reels.jpg" alt={""} />
+      <img className="absolute opacity-60" src="/5reels.jpg" alt="5Reels Telugu movie platform preview" />
     ),
     className:
       "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
@@ -76,7 +76,7 @@ const features = [
     href: "https://chat-app-front-another.vercel.app/",
     cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/chatconnect.jpg" alt={""} />
+      <img className="absolute opacity-60" src="/chatconnect.jpg" alt="ChatConnect real-time messaging application preview" />
     ),
     className:
       "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
@@ -893,7 +893,7 @@ export default function Home() {
             <h3 className="text-gray-500 font-light uppercase text-[1.1rem]">
               Welcome To my World
             </h3>
-            <h1 className="text-5xl">Hi I&#39;m Ramesh</h1>
+            <h1 className="text-5xl">Hi, I&#39;m Ramesh Bojanapu</h1>
 
             <p className="font-bold text-[24px]">
               I&#39;m <span ref={typedRef}></span>
@@ -956,7 +956,7 @@ export default function Home() {
             </div>
           </div>
           <div className="img-hero">
-            <img src="img/hero-preview.png" alt="" />
+            <img src="img/hero-preview.png" alt="Ramesh Bojanapu, full stack developer" />
             <div className="rotate-text">
               <div className="text">
                 <p>
@@ -982,7 +982,7 @@ export default function Home() {
 
         <section className="about caret-transparent" id="about">
           <div className="about-img">
-            <img src="img/aboutMe-preview.png" alt="" className="aboutHero " />
+            <img src="img/aboutMe-preview.png" alt="Ramesh Bojanapu working as a web developer" className="aboutHero " />
             <div className="showcase-ring">
               <img src="shapes/ring.png" className="ring" alt={""} />
               <img src="shapes/circle.png" className="circle" alt={""} />
@@ -1101,10 +1101,10 @@ export default function Home() {
                         </svg>
                         <strong className="px-1">Email: </strong>
                         <Link
-                          href="mailto:bramesh101020@gmailcom"
+                          href="mailto:bramesh101020@gmail.com"
                           target="_blank"
                         >
-                          <span>bramesh101020@gmailcom</span>
+                          <span>bramesh101020@gmail.com</span>
                         </Link>
                       </li>
                       <li className="flex items-center mb-5">
@@ -1278,20 +1278,22 @@ export default function Home() {
             <img
               src="shapes/circle.png"
               className="circle3 not-md:hidden"
-              alt={""}
+              alt=""
+              aria-hidden="true"
             />
             <img
               src="shapes/half-ring.png"
               className="half-ring not-md:hidden"
-              alt={""}
+              alt=""
+              aria-hidden="true"
             />
           </div>
         </section>
 
         <section className="blog caret-transparent" id="blog">
           <div className="main-text">
-            <h2 className="heading">Blog</h2>
-            <span>Latest News & Post</span>
+            <h2 className="heading">Selected Projects</h2>
+            <span>Web applications and digital products I have built</span>
             <div className="pt-9">
               <BentoGrid className="flex flex-wrap justify-center gap-4 ">
                 {features.map((feature, index) => (
