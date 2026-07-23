@@ -845,7 +845,7 @@ export default function Home() {
             </li>
 
             <li>
-              <Link href="#blog">Blog</Link>
+              <Link href="#blog">Projects</Link>
             </li>
 
             <li>
@@ -891,7 +891,7 @@ export default function Home() {
         <section className="home caret-transparent " id="home">
           <div className="mt-12">
             <h3 className="text-gray-500 font-light uppercase text-[1.1rem]">
-              Welcome To my World
+              Full-stack development for ambitious products
             </h3>
             <h1 className="text-5xl">Hi, I&#39;m Ramesh Bojanapu</h1>
 
@@ -900,15 +900,14 @@ export default function Home() {
             </p>
 
             <p>
-              I'm a passionate front-end developer with expertise in React,
-              Next.js, HTML, CSS, Tailwind CSS. I specialize in creating
-              visually appealing, responsive, and user-friendly interfaces that
-              enhance user experiences.
+              I help founders and teams turn rough product ideas into fast,
+              accessible web experiences. From polished interfaces to reliable
+              APIs, I build the full path from first click to lasting value.
             </p>
 
             <div className="btn-box">
               <Link href="mailto:bramesh101020@gmail.com" className="btn">
-                Hire Me Now !{" "}
+                Start a project{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -1293,7 +1292,7 @@ export default function Home() {
         <section className="blog caret-transparent" id="blog">
           <div className="main-text">
             <h2 className="heading">Selected Projects</h2>
-            <span>Web applications and digital products I have built</span>
+            <span>Selected work, shipped products, and the problems they solve</span>
             <div className="pt-9">
               <BentoGrid className="flex flex-wrap justify-center gap-4 ">
                 {features.map((feature, index) => (
@@ -1400,8 +1399,8 @@ export default function Home() {
             </div>
             <div className="contact-info" id="contact">
               <div className="main-text caret-transparent">
-                <h2 className="heading">Contact Me</h2>
-                <span>get in touch with me</span>
+                <h2 className="heading">Have a product to build?</h2>
+                <span>Tell me what you are working on and I will get back to you</span>
               </div>
               <ContactForm />
             </div>

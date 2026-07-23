@@ -5,6 +5,7 @@ import { Label } from "./ui/label";
 import { Textarea } from "./ui/textarea";
 
 const ContactForm = () => {
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -36,16 +37,17 @@ const ContactForm = () => {
         mode: "no-cors",
       },
     )
-      .then(() => console.log("Form submitted successfully"))
-      .catch((error) => alert("Error submitting form: " + error));
-
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+      .then(() => {
+        setStatus("success");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      })
+      .catch(() => setStatus("error"));
   };
   return (
     <div>
@@ -101,6 +103,16 @@ const ContactForm = () => {
             Submit
           </Button>
         </div>
+        {status === "success" && (
+          <p role="status" className="mt-4 text-center text-green-700">
+            Thanks, your message is on its way. I will be in touch soon.
+          </p>
+        )}
+        {status === "error" && (
+          <p role="alert" className="mt-4 text-center text-red-700">
+            Something went wrong. Please email me directly at bramesh101020@gmail.com.
+          </p>
+        )}
       </form>
     </div>
   );
