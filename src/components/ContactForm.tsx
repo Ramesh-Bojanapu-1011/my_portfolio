@@ -110,7 +110,8 @@ const ContactForm = () => {
         )}
         {status === "error" && (
           <p role="alert" className="mt-4 text-center text-red-700">
-            Something went wrong. Please email me directly at bramesh101020@gmail.com.
+            Something went wrong. Please email me directly at
+            bramesh101020@gmail.com.
           </p>
         )}
       </form>

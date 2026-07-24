@@ -15,7 +15,10 @@ export default function Document() {
         />
         <meta name="author" content="Ramesh Bojanapu" />
         <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow, max-image-preview:large" />
+        <meta
+          name="googlebot"
+          content="index, follow, max-image-preview:large"
+        />
         <meta name="bingbot" content="index, follow, max-image-preview:large" />
         <meta name="language" content="English" />
 
@@ -45,7 +48,10 @@ export default function Document() {
         />
         <meta property="og:site_name" content="Ramesh Bojanapu Portfolio" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:image:alt" content="Ramesh Bojanapu, full stack developer" />
+        <meta
+          property="og:image:alt"
+          content="Ramesh Bojanapu, full stack developer"
+        />
 
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -65,7 +71,10 @@ export default function Document() {
           name="twitter:image"
           content="https://i.postimg.cc/y6yWHhZf/Ramesh_Portfolio.png"
         />
-        <meta name="twitter:image:alt" content="Ramesh Bojanapu, full stack developer" />
+        <meta
+          name="twitter:image:alt"
+          content="Ramesh Bojanapu, full stack developer"
+        />
         <meta name="twitter:creator" content="@ramesh_bojanapu" />
 
         {/* Favicon */}

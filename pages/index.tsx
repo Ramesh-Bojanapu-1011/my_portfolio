@@ -52,7 +52,11 @@ const features = [
     href: "https://dyuti.ai/",
     cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/dyuti.jpg" alt="Dyuti AI student counseling platform preview" />
+      <img
+        className="absolute opacity-60"
+        src="/dyuti.jpg"
+        alt="Dyuti AI student counseling platform preview"
+      />
     ),
     className:
       "lg:col-start-1 lg:col-end-2 lg:row-start-3 h-[300px] lg:row-end-4",
@@ -64,7 +68,11 @@ const features = [
     href: "https://www.5reels.com/",
     cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/5reels.jpg" alt="5Reels Telugu movie platform preview" />
+      <img
+        className="absolute opacity-60"
+        src="/5reels.jpg"
+        alt="5Reels Telugu movie platform preview"
+      />
     ),
     className:
       "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
@@ -76,7 +84,11 @@ const features = [
     href: "https://chat-app-front-another.vercel.app/",
     cta: "Learn more",
     background: (
-      <img className="absolute opacity-60" src="/chatconnect.jpg" alt="ChatConnect real-time messaging application preview" />
+      <img
+        className="absolute opacity-60"
+        src="/chatconnect.jpg"
+        alt="ChatConnect real-time messaging application preview"
+      />
     ),
     className:
       "lg:col-start-3 lg:col-end-3 lg:row-start-1 h-[300px] lg:row-end-2",
@@ -900,9 +912,10 @@ export default function Home() {
             </p>
 
             <p>
-              I help founders and teams turn rough product ideas into fast,
-              accessible web experiences. From polished interfaces to reliable
-              APIs, I build the full path from first click to lasting value.
+              I help founders and teams turn ideas into fast, accessible web
+              apps. From polished interfaces to reliable APIs, I build scalable,
+              user-focused solutions that deliver seamless experiences and
+              create lasting value.
             </p>
 
             <div className="btn-box">
@@ -955,7 +968,10 @@ export default function Home() {
             </div>
           </div>
           <div className="img-hero">
-            <img src="img/hero-preview.png" alt="Ramesh Bojanapu, full stack developer" />
+            <img
+              src="img/hero-preview.png"
+              alt="Ramesh Bojanapu, full stack developer"
+            />
             <div className="rotate-text">
               <div className="text">
                 <p>
@@ -981,7 +997,11 @@ export default function Home() {
 
         <section className="about caret-transparent" id="about">
           <div className="about-img">
-            <img src="img/aboutMe-preview.png" alt="Ramesh Bojanapu working as a web developer" className="aboutHero " />
+            <img
+              src="img/aboutMe-preview.png"
+              alt="Ramesh Bojanapu working as a web developer"
+              className="aboutHero "
+            />
             <div className="showcase-ring">
               <img src="shapes/ring.png" className="ring" alt={""} />
               <img src="shapes/circle.png" className="circle" alt={""} />
@@ -1292,7 +1312,9 @@ export default function Home() {
         <section className="blog caret-transparent" id="blog">
           <div className="main-text">
             <h2 className="heading">Selected Projects</h2>
-            <span>Selected work, shipped products, and the problems they solve</span>
+            <span>
+              Selected work, shipped products, and the problems they solve
+            </span>
             <div className="pt-9">
               <BentoGrid className="flex flex-wrap justify-center gap-4 ">
                 {features.map((feature, index) => (
@@ -1400,7 +1422,9 @@ export default function Home() {
             <div className="contact-info" id="contact">
               <div className="main-text caret-transparent">
                 <h2 className="heading">Have a product to build?</h2>
-                <span>Tell me what you are working on and I will get back to you</span>
+                <span>
+                  Tell me what you are working on and I will get back to you
+                </span>
               </div>
               <ContactForm />
             </div>
