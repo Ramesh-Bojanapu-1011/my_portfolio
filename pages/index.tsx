@@ -1179,104 +1179,89 @@ export default function Home() {
           </div>
 
           <div className="allServices flex flex-wrap justify-center gap-10">
-            <div className="servicesItem">
-              <div className="icon-services">
-                <i>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="M22 7.999a1 1 0 0 0-.516-.874l-9.022-5a1 1 0 0 0-.968 0l-8.978 4.96a1 1 0 0 0-.003 1.748l9.022 5.04a1 1 0 0 0 .973.001l8.978-5A1 1 0 0 0 22 7.999m-9.977 3.855L5.06 7.965l6.917-3.822l6.964 3.859z"
-                    />
-                    <path
-                      fill="currentColor"
-                      d="M20.515 11.126L12 15.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
-                    />
-                    <path
-                      fill="currentColor"
-                      d="M20.515 15.126L12 19.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
-                    />
-                  </svg>
-                </i>
+            {[
+              {
+                icon: (
+                  <>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="34"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="M22 7.999a1 1 0 0 0-.516-.874l-9.022-5a1 1 0 0 0-.968 0l-8.978 4.96a1 1 0 0 0-.003 1.748l9.022 5.04a1 1 0 0 0 .973.001l8.978-5A1 1 0 0 0 22 7.999m-9.977 3.855L5.06 7.965l6.917-3.822l6.964 3.859z"
+                      />
+                      <path
+                        fill="currentColor"
+                        d="M20.515 11.126L12 15.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
+                      />
+                      <path
+                        fill="currentColor"
+                        d="M20.515 15.126L12 19.856l-8.515-4.73l-.971 1.748l9 5a1 1 0 0 0 .971 0l9-5z"
+                      />
+                    </svg>
+                  </>
+                ),
+                name: "App Development",
+                description:
+                  "I develop scalable and high-performance web applications using      React.js, Next.js, Node.js, and MongoDB. From planning and UIdesign to development and deployment, I build secure,responsive applications tailored to business needs.",
+              },
+              {
+                icon: (
+                  <>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="34"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="m7.375 16.781l1.25-1.562L4.601 12l4.024-3.219l-1.25-1.562l-5 4a1 1 0 0 0 0 1.562zm9.25-9.562l-1.25 1.562L19.399 12l-4.024 3.219l1.25 1.562l5-4a1 1 0 0 0 0-1.562zm-1.649-4.003l-4 18l-1.953-.434l4-18z"
+                      />
+                    </svg>
+                  </>
+                ),
+                name: "Web Development",
+                description:
+                  "I create modern, SEO-optimized websites and full-stack web solutions using the MERN stack. My focus is on clean architecture, fast performance, responsive design, and delivering seamless user experiences across all devices.",
+              },
+              {
+                icon: (
+                  <>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="34"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect width="24" height="24" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2M4 14V5h16l.002 9z"
+                      />
+                    </svg>
+                  </>
+                ),
+                name: "UI / UX Design",
+                description:
+                  "I design intuitive and visually appealing user interfaces with a strong focus on usability and accessibility. Using modern design principles, I ensure every website or application is responsive, engaging, and user-friendly.",
+              },
+            ].map((service, index) => (
+              <div key={index} className="servicesItem">
+                <div className="icon-services">
+                  <i>{service.icon}</i>
 
-                <span></span>
+                  <span></span>
+                </div>
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
               </div>
-              <h3>App Development</h3>
-              <p>
-                I develop scalable and high-performance web applications using
-                React.js, Next.js, Node.js, and MongoDB. From planning and UI
-                design to development and deployment, I build secure, responsive
-                applications tailored to business needs.
-              </p>
-              {/* <Link href="#" className="readMore">
-                Read More
-              </Link> */}
-            </div>
-
-            <div className="servicesItem">
-              <div className="icon-services">
-                <i>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="m7.375 16.781l1.25-1.562L4.601 12l4.024-3.219l-1.25-1.562l-5 4a1 1 0 0 0 0 1.562zm9.25-9.562l-1.25 1.562L19.399 12l-4.024 3.219l1.25 1.562l5-4a1 1 0 0 0 0-1.562zm-1.649-4.003l-4 18l-1.953-.434l4-18z"
-                    />
-                  </svg>
-                </i>
-                <span></span>
-              </div>
-              <h3>Web Development</h3>
-              <p>
-                I create modern, SEO-optimized websites and full-stack web
-                solutions using the MERN stack. My focus is on clean
-                architecture, fast performance, responsive design, and
-                delivering seamless user experiences across all devices.
-              </p>
-              {/* <Link href="#" className="readMore">
-                Read More
-              </Link> */}
-            </div>
-
-            <div className="servicesItem">
-              <div className="icon-services">
-                <i>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="34"
-                    height="34"
-                    viewBox="0 0 24 24"
-                  >
-                    <rect width="24" height="24" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2M4 14V5h16l.002 9z"
-                    />
-                  </svg>
-                </i>
-                <span></span>
-              </div>
-              <h3>UI / UX Design</h3>
-              <p>
-                I design intuitive and visually appealing user interfaces with a
-                strong focus on usability and accessibility. Using modern design
-                principles, I ensure every website or application is responsive,
-                engaging, and user-friendly.
-              </p>
-              {/* <Link href="#" className="readMore">
-                Read More
-              </Link> */}
-            </div>
+            ))}
           </div>
 
           <div className="proposal">
