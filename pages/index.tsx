@@ -645,7 +645,7 @@ const socialLinks = [
   },
   {
     name: "WhatsApp",
-    href: "https://wa.me/917032014549",
+    href: "https://wa.me/916281230093",
     svg: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -1053,8 +1053,8 @@ export default function Home() {
                           <path d="M192 128l128 128-128 128z"></path>
                         </svg>
                         <strong className="px-1">Phone:</strong>{" "}
-                        <Link href="tel:9380898635">
-                          <span>+91 9380898635</span>
+                        <Link href="tel:6281230093">
+                          <span>+91 6281230093</span>
                         </Link>
                       </li>
                       <li className="flex items-center mb-5">
@@ -1631,7 +1631,7 @@ export default function Home() {
                   ),
                 },
                 {
-                  link: "https://wa.me/917032014549",
+                  link: "https://wa.me/916281230093",
                   svg: (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
